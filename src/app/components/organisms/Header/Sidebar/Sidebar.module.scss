@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 100%;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(34, 34, 34, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9000;
+  transition: left 0.3s ease-in-out;
+
+  &.open {
+    left: 0;
+  }
+}
+
+.button {
+  width: 100%;
+  margin: 0 2em;
+  padding-bottom: 0.5em;
+  padding-top: 3em;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.3s ease, color 0.3s ease;
+
+  &.active {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+}
+
+.label {
+  font-size: 1.5em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
