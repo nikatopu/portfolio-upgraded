@@ -9,14 +9,24 @@
 
   --text-font: "Alexandria", sans-serif;
   --emphasis-font: "Leckerli One", cursive;
+
+  --shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+  --side-padding: 2em;
+  --header-height: 4em;
 }
 
 body {
   font-family: var(--text-font);
   margin: 0;
   padding: 0;
+
   color: var(--text-color);
   background-color: var(--bg-color);
+
+  @media (min-width: 1400px) {
+    font-size: 1.2vw;
+  }
 }
 
 * {

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.link {
+  width: 3.25em;
+  height: 3.25em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #2b2b2b;
+  box-shadow: var(--shadow);
+
+  svg {
+    width: 2em;
+    height: 2em;
+    fill: var(--text-color);
+  }
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05) translate(-3px, -3px);
+  }
+}

@@ -5,4 +5,5 @@ export interface IAppContextProps {
   setSection: React.Dispatch<React.SetStateAction<TSection>>;
   sidebarOpen: boolean;
   setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  renderStyled: (child: React.ReactNode, styles: any) => React.ReactNode;
 }
