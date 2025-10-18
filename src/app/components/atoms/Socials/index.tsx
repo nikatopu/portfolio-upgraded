@@ -9,20 +9,44 @@ import {
 export default function Socials() {
   return (
     <div className={style.container}>
-        
-      <a href="#" className={style.link}>
-        <FontAwesomeIcon icon={faLinkedin} color="#F6F8FA" />
+      <a
+        href="https://www.linkedin.com/in/nikoloz-topuridze-258676270/"
+        className={style.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon
+          icon={faLinkedin}
+          color="#F6F8FA"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
       </a>
 
-      <a href="#" className={style.link}>
+      <a
+        href="https://github.com/nikatopu"
+        className={style.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faGithub} color="#F6F8FA" />
       </a>
 
-      <a href="#" className={style.link}>
+      <a
+        href="https://www.upwork.com/freelancers/~013d80c1983522a87c?mp_source=share"
+        className={style.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faUpwork} color="#F6F8FA" />
       </a>
 
-      <a href="#" className={style.link}>
+      <a
+        href="https://www.fiverr.com/s/7YNy77b"
+        className={style.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <svg
           width="30"
           height="32"
