@@ -2,7 +2,7 @@
 .mobileHeader {
   width: 100%;
   max-width: 100svw;
-  overflow: hidden;
+  overflow-x: hidden;
   height: var(--header-height);
 
   position: sticky;
@@ -21,6 +21,10 @@
   justify-content: flex-start;
 
   padding: 0 var(--side-padding);
+}
+
+.expanded {
+  overflow-x: visible;
 }
 
 .button {

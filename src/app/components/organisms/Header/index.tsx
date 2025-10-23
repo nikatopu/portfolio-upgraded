@@ -55,7 +55,12 @@ export default function Header() {
 
   if (mobile === true)
     return (
-      <div className={style.mobileHeader}>
+      <div
+        className={classNames(
+          style.mobileHeader,
+          sidebarOpen && style.expanded
+        )}
+      >
         <Sidebar buttons={headerButtons} />
 
         <button
