@@ -14,8 +14,9 @@ export interface IHeaderButton {
 }
 
 export default function Header() {
-  const { section, setSection, sidebarOpen, setSidebarOpen } = useAppContextProvider();
-  const [mobile, setMobile] = useState(false);
+  const { section, setSection, sidebarOpen, setSidebarOpen } =
+    useAppContextProvider();
+  const [mobile, setMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const onResize = () => setMobile(window.innerWidth < 768);
@@ -52,7 +53,7 @@ export default function Header() {
     },
   ];
 
-  if (mobile)
+  if (mobile === true)
     return (
       <div className={style.mobileHeader}>
         <Sidebar buttons={headerButtons} />
@@ -102,18 +103,23 @@ export default function Header() {
         </button>
       </div>
     );
+  if (mobile === false)
+    return (
+      <header className={style.container}>
+        {headerButtons.map((button) => (
+          <button
+            key={button.label}
+            className={classNames(
+              style.button,
+              button.isActive && style.active
+            )}
+            onClick={button.onClick}
+          >
+            <span className={style.label}>{button.label}</span>
+          </button>
+        ))}
+      </header>
+    );
 
-  return (
-    <header className={style.container}>
-      {headerButtons.map((button) => (
-        <button
-          key={button.label}
-          className={classNames(style.button, button.isActive && style.active)}
-          onClick={button.onClick}
-        >
-          <span className={style.label}>{button.label}</span>
-        </button>
-      ))}
-    </header>
-  );
+  return <header className={style.container}></header>;
 }

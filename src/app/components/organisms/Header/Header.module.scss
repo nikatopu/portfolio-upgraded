@@ -1,6 +1,8 @@
 .container,
 .mobileHeader {
   width: 100%;
+  max-width: 100svw;
+  overflow: hidden;
   height: var(--header-height);
 
   position: sticky;
