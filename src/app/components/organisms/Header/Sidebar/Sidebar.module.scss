@@ -1,5 +1,5 @@
 .container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 100%;
 
@@ -16,7 +16,7 @@
   justify-content: center;
 
   z-index: 9000;
-  transition: left 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &.open {
     left: 0;

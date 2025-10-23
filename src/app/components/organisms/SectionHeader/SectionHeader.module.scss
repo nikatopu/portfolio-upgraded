@@ -1,0 +1,213 @@
+.container {
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  max-width: min(70em, 95vw);
+  height: 100%;
+  margin-right: 2em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  &.small {
+    max-width: 50em;
+  }
+}
+
+.shadow {
+  position: relative;
+  filter: drop-shadow(var(--shadow));
+}
+
+.headerContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.headerBackground {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.commentContainer {
+  position: relative;
+  z-index: 0;
+}
+
+.commentBackground {
+  z-index: 0;
+
+  width: 80%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  padding-left: 2em;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.mirrored {
+  position: relative;
+  top: 0;
+  left: 100%;
+
+  transform-origin: left center;
+  transform: scaleX(-1);
+
+  .headerContainer,
+  .commentContainer {
+    width: 100%;
+    text-align: right;
+  }
+
+  .headerBackground,
+  .commentBackground {
+    left: 0;
+    transform: none;
+  }
+
+  .text {
+    transform: scaleX(-1);
+    padding-right: 2em;
+  }
+
+  .imageContainer {
+    transform: scaleX(-1);
+  }
+
+  .extraContent {
+    transform: scaleX(-1);
+    * {
+      text-align: right !important;
+    }
+  }
+}
+
+.withImage {
+  margin-bottom: -14em;
+
+  .text {
+    padding-left: 45%;
+    width: auto;
+  }
+
+  .commentBackground {
+    width: 90%;
+  }
+
+  &.mirrored {
+    .text {
+      padding-left: 0;
+      padding-right: 45%;
+      width: auto;
+
+      * {
+        text-align: right !important;
+      }
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+  z-index: 2;
+  top: -5em;
+  left: 3%;
+
+  width: 40%;
+  height: 20em;
+
+  border-radius: 0.25em;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.extraContent {
+  position: relative;
+  z-index: 2em;
+  top: -19em;
+  left: 45%;
+
+  width: 50%;
+  min-height: 15em;
+}
+
+@media (max-width: 900px) {
+  .imageContainer {
+    width: 80%;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+  }
+
+  .withImage {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+
+    .headerBackground,
+    .commentBackground {
+      width: 90%;
+    }
+    .text {
+      padding-left: 2em;
+      width: 100%;
+    }
+
+    &.mirrored {
+      .text {
+        padding-right: 2em;
+        width: auto;
+      }
+
+      .imageContainer {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .extraContent > * {
+        text-align: center !important;
+      }
+    }
+  }
+
+  .extraContent {
+    top: 1.5em;
+    left: unset;
+    width: calc(100% - 4em);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 2em;
+
+    * {
+      text-align: center !important;
+    }
+  }
+}

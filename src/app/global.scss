@@ -6,6 +6,7 @@
   --bg-color: #2b2b2b;
   --bg-dark-color: #222222;
   --bg-light-color: #3f424a;
+  --bg-button: #6d7b97;
 
   --text-font: "Alexandria", sans-serif;
   --emphasis-font: "Leckerli One", cursive;
@@ -24,6 +25,9 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
 
+  width: 100vw;
+  overflow-x: hidden;
+
   @media (min-width: 1400px) {
     font-size: 1.2vw;
   }
@@ -31,4 +35,5 @@ body {
 
 * {
   box-sizing: border-box;
+  // border: 1px solid red !important; /* Debugging aid, remove later */
 }

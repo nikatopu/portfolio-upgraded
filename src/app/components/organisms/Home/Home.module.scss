@@ -4,9 +4,11 @@
   align-items: flex-start;
   justify-content: space-between;
 
-  margin: 2em 0;
+  margin-top: 2em;
   height: calc(100svh - var(--header-height) - 4em);
   width: 100%;
+
+  padding: 0 var(--side-padding);
 }
 
 .textsContainer {
@@ -20,26 +22,24 @@
 .imageContainer {
   position: absolute;
   right: 0;
-  top: 8em;
+  top: 12em;
 
-  picture {
-    img {
-      width: 100%;
-      max-width: 35em;
-      height: auto;
-    }
+  img {
+    width: 100%;
+    max-width: 35em;
+    height: auto;
   }
 
   @media (max-width: 1180px) {
     font-size: 0.8em;
-    top: 25svh;
+    top: 35svh;
   }
 
   @media (max-width: 950px) {
-    top: 40svh;
+    top: 45svh;
   }
 
   @media (max-width: 768px) {
-    top: 30svh;
+    top: 35svh;
   }
 }

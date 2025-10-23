@@ -1,0 +1,55 @@
+.container {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+
+  text-shadow: var(--shadow);
+}
+
+.bold {
+  color: var(--accent-color);
+}
+
+.italic {
+  font-family: var(--emphasis-font);
+}
+
+.default {
+  color: var(--text-color);
+}
+
+.lighter {
+  color: #cccccc;
+}
+
+.link {
+  border-bottom: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.medium {
+  font-size: 1em;
+}
+
+.large {
+  font-size: 2.25em;
+}
+
+@media (max-width: 768px) {
+  .small {
+    font-size: clamp(0.75em, 2vw, 1em);
+  }
+
+  .medium {
+    font-size: clamp(0.5em, 2.5vw, 2em);
+  }
+
+  .large {
+    font-size: clamp(1.5em, 5vw, 3.5em);
+  }
+}

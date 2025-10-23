@@ -18,8 +18,6 @@ export default function Socials() {
         <FontAwesomeIcon
           icon={faLinkedin}
           color="#F6F8FA"
-          target="_blank"
-          rel="noopener noreferrer"
         />
       </a>
 

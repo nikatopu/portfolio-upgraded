@@ -4,7 +4,7 @@ import style from "./Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.textsContainer}>
         <Title size="large">
           Welcome to my{" "}
@@ -31,18 +31,14 @@ export default function Home() {
       </div>
 
       <div className={style.imageContainer}>
-        <picture>
-          <source srcSet="/assets/images/me.webp" type="image/webp" />
-          <source srcSet="/assets/images/me.png" type="image/png" />
           <img
             src="/assets/images/me.png"
             alt="Picture of the author"
             loading="lazy"
           />
-        </picture>
       </div>
 
       <Socials />
-    </div>
+    </section>
   );
 }
