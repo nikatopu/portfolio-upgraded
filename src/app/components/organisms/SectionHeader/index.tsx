@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SectionHeader.module.scss";
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
 type Props = {
   title: React.ReactNode;
@@ -20,7 +21,13 @@ export default function SectionHeader({
   content,
 }: Props) {
   return (
-    <div className={classNames(styles.container)}>
+    <motion.div
+      className={classNames(styles.container)}
+      initial={{ x: mirrored ? 100 : -100 }}
+      transition={{ duration: 0.8 }}
+      whileInView={{ x: 0 }}
+      viewport={{ once: true }}
+    >
       <div
         className={classNames(
           styles.content,
@@ -61,11 +68,9 @@ export default function SectionHeader({
         )}
 
         {image && comment && content && (
-          <div className={styles.extraContent}>
-            {content}
-          </div>
+          <div className={styles.extraContent}>{content}</div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

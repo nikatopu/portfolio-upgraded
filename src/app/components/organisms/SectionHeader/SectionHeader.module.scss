@@ -40,6 +40,10 @@
 .commentContainer {
   position: relative;
   z-index: 0;
+
+  .text {
+    font-size: 0.8em;
+  }
 }
 
 .commentBackground {

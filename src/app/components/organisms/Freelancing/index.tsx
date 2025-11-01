@@ -1,14 +1,13 @@
 import { IProjectCard } from "@/app/lib/types";
-import { motion } from "framer-motion";
 import Paragraph from "../../atoms/Paragraph";
 import Title from "../../atoms/Title";
 import SectionHeader from "../SectionHeader";
-import style from "./Work.module.scss";
+import style from "./Freelancing.module.scss";
 import ProjectCard from "../ProjectCard";
 import CheckSite from "../../atoms/CheckSite";
 
-export default function Work() {
-  const glitchProjects: IProjectCard[] = [
+export default function Freelancing() {
+  const otherProjects: IProjectCard[] = [
     {
       image: "/assets/projects/glitch/popgirlsummer.jpg",
       title: "Pop Girl Summer",
@@ -73,81 +72,53 @@ export default function Work() {
   ];
 
   return (
-    <motion.section
-      className={style.container}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-    >
+    <section className={style.container}>
       <SectionHeader
         title={
           <Title size="medium">
-            <b>Work Experience</b> & Projects
+            <b>Freelancing</b> Projects
           </Title>
         }
       />
 
       <SectionHeader
-        size="small"
         title={
           <Paragraph size="large">
-            <b>Glitch LLC</b> Highlights
-          </Paragraph>
-        }
-        comment={
-          <Paragraph>Working as a Jr Front-End since Mar 2025</Paragraph>
-        }
-      />
-
-      <div className={style.projectsContainer}>
-        {glitchProjects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </div>
-
-      <SectionHeader
-        title={
-          <Paragraph size="large">
-            <b>DevsData LLC</b>
+            <b>Anuka Live</b>
           </Paragraph>
         }
         comment={
           <Paragraph>
-            Worked as a Jr Front-End from Oct 2024 to June 2025
+            Worked as a Full-Stack Developer from Jan 2025 to Sep 2025
           </Paragraph>
         }
         image={"/assets/projects/devsdata.png"}
         content={
           <>
-            <Title>
-              <b>Website Maintenance</b>
-            </Title>
-
             <Paragraph size="small">
-              &ensp;Tech Used: PHP, WordPress, JavaScript, CSS, SCSS, Trello,
-              GitLab
+              &ensp;Tech Used: React, React-Router, Bcrypt, Cloudinary, Prisma,
+              Vercel, Porkbun hosting
             </Paragraph>
 
             <br />
 
             <Paragraph size="small" align="left" color="lighter">
-              &ensp;Working here for ~9 months, I got familiar with PHP and
-              WordPress with some of its plugins as well. Using plain
-              JavaScript, CSS and SCSS I was tasked with maintaining (and
-              improving) the website’s quality. With my time there I improved
-              Lighthouse score from ~60 to 90+ by optimizing performance,
-              responsiveness, security and SEO.
+              &ensp; Based on a given Figma design, I built from scratch a
+              website for the musician Anuka Kipshidze, delivering the MVP as
+              early as in 3 months. I then continued working with Anuka to
+              improve the website’s SEO and add additional deliverables, such as
+              an admin panel (using Prisma DB) to easily edit the content shown
+              on the website.
               <br />
               <br />
-              &ensp;I was a part of a huge international team of developers, had
-              daily communications with my project manager, QA testers and the
-              CEO himself to get the best outcome out of my tireless working
-              effort.
+              &ensp;There were some difficulties throughout the period of
+              development, since adding new features while keeping the old
+              design clean and polished proved challenging, but at the end I can
+              proudly say that this website is one of my best creations.
               <br />
               <br />
-              &ensp;Left the company because of a better opportunity arising -
-              Glitch LLC.
+              &ensp;This was a freelancing project with additional steps because
+              of further development.
             </Paragraph>
 
             <br />
@@ -161,44 +132,41 @@ export default function Work() {
         mirrored
         title={
           <Paragraph size="large">
-            <b>Iberieli LLC</b>
+            <b>GeoWonder</b>
           </Paragraph>
         }
         comment={
           <Paragraph>
-            Worked as a Jr Front-End since Feb 2024 to May 2024
+            Worked as a Full-Stack Developer from July 2025 to Sep 2025
           </Paragraph>
         }
         image={"/assets/projects/iberieli.jpg"}
         content={
           <>
-            <Title>
-              <b>Website Development</b>
-            </Title>
-
             <Paragraph size="small">
-              &ensp;Tech Used: GitHub, Yahoo domain hosting, JavaScript, CSS,
-              HTML
+              &ensp;Tech Used: Next.js, Typescript, Prisma DB, Blob, SCSS, Zod,
+              Vercel, Porkbun Hosting
             </Paragraph>
 
             <br />
 
             <Paragraph size="small" align="left" color="lighter">
-              &ensp;My first ever work experience began with me contacting the
-              head of Iberieli to improve their official website Iberieli.com
-              and improve the quality of their SEO.
+              &ensp;With the help of my friend as the Project Manager, I created
+              the official website for the Georgian tourism firm - GeoWonder.
+              From the PM I knew exactly in great detail what needed to be
+              delivered, how and when. With this clear communication I was able
+              to increase my efficiency and deliver the entire project in 3
+              months.
               <br />
               <br />
-              &ensp;Through this experience I got hands on experience dealing
-              with customers and delivering products that meet a certain
-              criterion - in this case, the business goals and branding.
-              Additionally, I learned the first basics of designing, building
-              and hosting a website all on my own, taking the first steps of
-              being a full-stack developer.
+              &ensp;This project included the Backend admin panel for
+              controlling the tours and content shown on the Front-End, proving
+              my abilities as a Full-Stack developer. I also helped with the
+              setup of this project, helping the owner buy the domain and host
+              it.
               <br />
               <br />
-              &ensp;This was a contract-based work, lasting only for a couple of
-              months until the product was finished.
+              &ensp;This was my most time efficient freelancing project.
             </Paragraph>
 
             <br />
@@ -207,6 +175,21 @@ export default function Work() {
           </>
         }
       />
-    </motion.section>
+
+      <SectionHeader
+        size="small"
+        title={
+          <Paragraph size="large">
+            <b>Other</b> Highlights
+          </Paragraph>
+        }
+      />
+
+      <div className={style.otherProjectsContainer}>
+        {otherProjects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
+      </div>
+    </section>
   );
 }
