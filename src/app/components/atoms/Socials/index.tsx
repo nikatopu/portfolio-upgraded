@@ -1,3 +1,5 @@
+"use client";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "./Socials.module.scss";
 import {
@@ -5,45 +7,59 @@ import {
   faLinkedin,
   faUpwork,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 export default function Socials() {
   return (
     <div className={style.container}>
-      <a
+      <motion.a
         href="https://www.linkedin.com/in/nikoloz-topuridze-258676270/"
         className={style.link}
         target="_blank"
         rel="noopener noreferrer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0 }}
+        viewport={{ once: true }}
       >
-        <FontAwesomeIcon
-          icon={faLinkedin}
-          color="#F6F8FA"
-        />
-      </a>
+        <FontAwesomeIcon icon={faLinkedin} color="#F6F8FA" />
+      </motion.a>
 
-      <a
+      <motion.a
         href="https://github.com/nikatopu"
         className={style.link}
         target="_blank"
         rel="noopener noreferrer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
+        viewport={{ once: true }}
       >
         <FontAwesomeIcon icon={faGithub} color="#F6F8FA" />
-      </a>
+      </motion.a>
 
-      <a
+      <motion.a
         href="https://www.upwork.com/freelancers/~013d80c1983522a87c?mp_source=share"
         className={style.link}
         target="_blank"
         rel="noopener noreferrer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.4 }}
+        viewport={{ once: true }}
       >
         <FontAwesomeIcon icon={faUpwork} color="#F6F8FA" />
-      </a>
+      </motion.a>
 
-      <a
+      <motion.a
         href="https://www.fiverr.com/s/7YNy77b"
         className={style.link}
         target="_blank"
         rel="noopener noreferrer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.6 }}
+        viewport={{ once: true }}
       >
         <svg
           width="30"
@@ -57,7 +73,7 @@ export default function Socials() {
             fill="#F6F8FA"
           />
         </svg>
-      </a>
+      </motion.a>
     </div>
   );
 }

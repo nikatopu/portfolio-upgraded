@@ -6,16 +6,19 @@ import Header from "./components/organisms/Header";
 import Home from "./components/organisms/Home";
 import Work from "./components/organisms/Work";
 import styles from "./Page.module.scss";
+import Footer from "./components/organisms/Footer";
 
 export default function Page() {
   return (
-    <AnimatePresence mode="wait" >
+    <AnimatePresence mode="wait">
       <div className={styles.container}>
         <Home />
 
         <Work />
 
         <Freelancing />
+
+        <Footer />
       </div>
     </AnimatePresence>
   );

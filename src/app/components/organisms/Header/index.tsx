@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { useState, useEffect } from "react";
 import { TSection } from "@/app/lib/types";
 import Sidebar from "./Sidebar";
+import { motion } from "framer-motion";
 
 export interface IHeaderButton {
   label: string;
@@ -111,17 +112,21 @@ export default function Header() {
   if (mobile === false)
     return (
       <header className={style.container}>
-        {headerButtons.map((button) => (
-          <button
+        {headerButtons.map((button, index) => (
+          <motion.button
             key={button.label}
             className={classNames(
               style.button,
               button.isActive && style.active
             )}
             onClick={button.onClick}
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            viewport={{ once: true }}
           >
             <span className={style.label}>{button.label}</span>
-          </button>
+          </motion.button>
         ))}
       </header>
     );
