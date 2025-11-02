@@ -12,6 +12,12 @@ export const AppContext = createContext<IAppContextProps | null>(null);
 export default function AppContextProvider({ children }: IProps) {
   const [section, setSection] = useState<TSection>("home");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const allSections: Record<TSection, TSection> = {
+    home: "home",
+    work: "work",
+    freelancing: "freelancing",
+    other: "other",
+  };
 
   function renderStyled(child: React.ReactNode, styles: any): React.ReactNode {
     if (typeof child === "string")
@@ -44,6 +50,7 @@ export default function AppContextProvider({ children }: IProps) {
         sidebarOpen,
         setSidebarOpen,
         renderStyled,
+        allSections,
       }}
     >
       {children}
