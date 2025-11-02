@@ -2,6 +2,7 @@ import "./global.scss";
 import type { Metadata } from "next";
 import AppContextProvider from "./lib/AppContext";
 import Header from "./components/organisms/Header";
+import Gradients from "./components/organisms/Gradients";
 
 export const metadata: Metadata = {
   title: "Nikoloz | Portfolio",
@@ -17,6 +18,8 @@ export default function RootLayout({
     <html lang="en">
       <AppContextProvider>
         <body>
+          <Gradients />
+          
           <Header />
 
           {children}

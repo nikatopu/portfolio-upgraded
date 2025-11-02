@@ -1,0 +1,63 @@
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100lvw;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  pointer-events: none;
+}
+
+.gradient {
+  border-radius: 50%;
+  pointer-events: none;
+
+  right: 0;
+  top: 0;
+
+  position: absolute;
+  background: radial-gradient(circle, #6d7b9760, #6d7b9705, transparent);
+
+  // Animate in slowly
+  animation: fadeInGradient 3s ease-in forwards;
+}
+
+@keyframes fadeInGradient {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gradient1 {
+  width: 2000px;
+  height: 2000px;
+  transform: translate(-40%, -50%);
+}
+
+.gradient2 {
+  width: 3000px;
+  height: 3000px;
+  transform: translate(50%, 0%);
+}
+
+.gradient3 {
+  width: 4000px;
+  height: 4000px;
+  transform: translate(0%, 20%);
+}
+
+.gradient4 {
+  width: 3000px;
+  height: 3000px;
+  transform: translate(50%, 90%);
+}
+
+.gradient5 {
+  width: 2000px;
+  height: 2000px;
+  transform: translate(-50%, 230%);
+}
