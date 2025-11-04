@@ -9,65 +9,66 @@ import CheckSite from "../../atoms/CheckSite";
 export default function Freelancing() {
   const otherProjects: IProjectCard[] = [
     {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Pop Girl Summer",
-      techs: ["Next.js", "Typescript", "SCSS", "MongoDB"],
+      image: "/assets/projects/other-projects/cubical.png",
+      title: "Cubical (Video Game)",
+      techs: ["GameMaker", "Pixel Art", "BFXR"],
       description:
-        "Split into pop girl teams and play games or do quizzes to earn points.",
-      link: "https://popgirlsummer.com/",
+        "2.5D pixel art puzzle game with music and sound effects all done by me.",
+      link: "https://nicolaeus.itch.io/cubical",
     },
     {
-      image: "/assets/projects/glitch/cynthiaerivo.jpg",
-      title: "Cynthia Erivo Journal",
-      techs: ["Next.js", "Canvas", "TypeScript", "SCSS"],
+      image: "/assets/projects/other-projects/robodventure.png",
+      title: "Robodventure (Video Game)",
+      techs: ["GameMaker", "Pixel Art", "BFXR"],
       description:
-        "Artistic Journal with feather falling transitions made in Canvas.",
-      link: "https://popgirlsummer.com/",
+        "2D pixel art story-driven game with music and sound effects all done by me.",
+      link: "https://nicolaeus.itch.io/the-robodventure",
     },
     {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Stray Kids Game",
-      techs: ["Phaser", "Next.js", "TypeScript"],
-      description: "Made for marketing Straykids’s new album, GUI made by me.",
-      link: "https://popgirlsummer.com/",
-    },
-    {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Pop Girl Summer",
-      techs: ["Next.js", "Typescript", "SCSS", "MongoDB"],
+      image: "/assets/projects/other-projects/us-elections.png",
+      title: "US Elections (Data Scraping)",
+      techs: ["Python", "beautifulsoup4", "requests", "lxml"],
       description:
-        "Split into pop girl teams and play games or do quizzes to earn points.",
-      link: "https://popgirlsummer.com/",
+        "Data Scraping of US Elections history for Finals Project. (Collab w/ Friend)",
+      link: "https://github.com/NinoBendianishvili/DataScraping_US_Elections",
     },
     {
-      image: "/assets/projects/glitch/cynthiaerivo.jpg",
-      title: "Cynthia Erivo Journal",
-      techs: ["Next.js", "Canvas", "TypeScript", "SCSS"],
+      image: "/assets/projects/other-projects/we-we.png",
+      title: "WeWe (Weather API Front)",
+      techs: ["Node.js", "Express.js", "Axios.js"],
       description:
-        "Artistic Journal with feather falling transitions made in Canvas.",
-      link: "https://popgirlsummer.com/",
+        "Weather front-end app using a free api to prove I can work with apis.",
+      link: "https://wewe-g7w6.onrender.com/",
     },
     {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Stray Kids Game",
-      techs: ["Phaser", "Next.js", "TypeScript"],
-      description: "Made for marketing Straykids’s new album, GUI made by me.",
-      link: "https://popgirlsummer.com/",
-    },
-    {
-      image: "/assets/projects/glitch/cynthiaerivo.jpg",
-      title: "Cynthia Erivo Journal",
-      techs: ["Next.js", "Canvas", "TypeScript", "SCSS"],
+      image: "/assets/projects/other-projects/topucodes.png",
+      title: "Procedural Generation (Tutorial)",
+      techs: ["GameMaker", "YouTube"],
       description:
-        "Artistic Journal with feather falling transitions made in Canvas.",
-      link: "https://popgirlsummer.com/",
+        "A video describing how to create a procedural generating dungeon game.",
+      link: "https://www.youtube.com/watch?v=Cjg6RlmtTgM",
     },
     {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Stray Kids Game",
-      techs: ["Phaser", "Next.js", "TypeScript"],
-      description: "Made for marketing Straykids’s new album, GUI made by me.",
-      link: "https://popgirlsummer.com/",
+      image: "/assets/projects/other-projects/watchedthem.png",
+      title: "WatchedThem (GitHub)",
+      techs: ["PostgreSQL", "Database Engineering"],
+      description:
+        "Code of a movie review website with better UX/UI than other websites.",
+      link: "https://github.com/nikatopu/WatchedThem",
+    },
+    {
+      image: "",
+      title: "Salon Booking Website",
+      techs: ["COMING SOON"],
+      description: "A website to book salons.",
+      link: "",
+    },
+    {
+      image: "",
+      title: "Abaula Spot The Ball",
+      techs: ["COMING SOON"],
+      description: "A website from Abaula to play and win real prizes.",
+      link: "",
     },
   ];
 
@@ -92,7 +93,7 @@ export default function Freelancing() {
             Worked as a Full-Stack Developer from Jan 2025 to Sep 2025
           </Paragraph>
         }
-        image={"/assets/projects/devsdata.png"}
+        image={"/assets/projects/anukalive.jpg"}
         content={
           <>
             <Paragraph size="small">
@@ -140,7 +141,7 @@ export default function Freelancing() {
             Worked as a Full-Stack Developer from July 2025 to Sep 2025
           </Paragraph>
         }
-        image={"/assets/projects/iberieli.jpg"}
+        image={"/assets/projects/geowonder.jpg"}
         content={
           <>
             <Paragraph size="small">

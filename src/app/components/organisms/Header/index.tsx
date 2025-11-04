@@ -48,9 +48,9 @@ export default function Header() {
       isActive: section === "freelancing",
     },
     {
-      label: "Other",
-      onClick: () => toSection("other"),
-      isActive: section === "other",
+      label: "Contact",
+      onClick: () => toSection("contact"),
+      isActive: section === "contact",
     },
   ];
 

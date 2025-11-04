@@ -24,16 +24,24 @@ export default function ProjectCard({
       viewport={{ once: true }}
     >
       <div className={style.imageContainer}>
-        <img src={image} alt={title} loading="lazy" />
+        {image && <img src={image} alt={title} loading="lazy" />}
+        {!image && (
+          <img
+            src={"/assets/projects/other-projects/coming-soon.png"}
+            alt={title}
+            loading="lazy"
+          />
+        )}
       </div>
 
       <div className={style.textsContainer}>
-        <Title size="small">
+        <Title size="small" align="center">
           <b>{title}</b>
         </Title>
 
         <Paragraph size="small" align="center">
-          Tech: {techs.join(", ")}
+          {techs?.[0] === "COMING SOON" && techs[0]}
+          {techs?.[0] != "COMING SOON" && <>Tech: {techs.join(", ")}</>}
         </Paragraph>
 
         <Paragraph size="small" align="center" color="lighter">

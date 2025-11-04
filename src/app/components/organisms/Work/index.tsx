@@ -18,57 +18,27 @@ export default function Work() {
       link: "https://popgirlsummer.com/",
     },
     {
-      image: "/assets/projects/glitch/cynthiaerivo.jpg",
+      image: "/assets/projects/glitch/cynthia-erivo.jpg",
       title: "Cynthia Erivo Journal",
       techs: ["Next.js", "Canvas", "TypeScript", "SCSS"],
       description:
         "Artistic Journal with feather falling transitions made in Canvas.",
-      link: "https://popgirlsummer.com/",
+      link: "https://dmi.umgapps.com/cynthiaerivo/journal",
     },
     {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
+      image: "/assets/projects/glitch/stray-kids.jpg",
       title: "Stray Kids Game",
       techs: ["Phaser", "Next.js", "TypeScript"],
       description: "Made for marketing Straykids’s new album, GUI made by me.",
-      link: "https://popgirlsummer.com/",
+      link: "https://archive24.glitch.ge/straykids/topdown/",
     },
     {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Pop Girl Summer",
-      techs: ["Next.js", "Typescript", "SCSS", "MongoDB"],
+      image: "/assets/projects/glitch/kpopdemonhunters.jpg",
+      title: "KPOP Demon Hunters Quiz",
+      techs: ["Next.js", "Typescript", "Canvas"],
       description:
-        "Split into pop girl teams and play games or do quizzes to earn points.",
-      link: "https://popgirlsummer.com/",
-    },
-    {
-      image: "/assets/projects/glitch/cynthiaerivo.jpg",
-      title: "Cynthia Erivo Journal",
-      techs: ["Next.js", "Canvas", "TypeScript", "SCSS"],
-      description:
-        "Artistic Journal with feather falling transitions made in Canvas.",
-      link: "https://popgirlsummer.com/",
-    },
-    {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Stray Kids Game",
-      techs: ["Phaser", "Next.js", "TypeScript"],
-      description: "Made for marketing Straykids’s new album, GUI made by me.",
-      link: "https://popgirlsummer.com/",
-    },
-    {
-      image: "/assets/projects/glitch/cynthiaerivo.jpg",
-      title: "Cynthia Erivo Journal",
-      techs: ["Next.js", "Canvas", "TypeScript", "SCSS"],
-      description:
-        "Artistic Journal with feather falling transitions made in Canvas.",
-      link: "https://popgirlsummer.com/",
-    },
-    {
-      image: "/assets/projects/glitch/popgirlsummer.jpg",
-      title: "Stray Kids Game",
-      techs: ["Phaser", "Next.js", "TypeScript"],
-      description: "Made for marketing Straykids’s new album, GUI made by me.",
-      link: "https://popgirlsummer.com/",
+        "Quiz to find out which Demon Hunter you are based on your answers.",
+      link: "https://dmi.umgapps.com/kpopdemonhunters/quiz",
     },
   ];
 

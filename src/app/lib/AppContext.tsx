@@ -16,7 +16,7 @@ export default function AppContextProvider({ children }: IProps) {
     home: "home",
     work: "work",
     freelancing: "freelancing",
-    other: "other",
+    contact: "contact",
   };
 
   function renderStyled(child: React.ReactNode, styles: any): React.ReactNode {

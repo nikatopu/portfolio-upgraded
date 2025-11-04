@@ -5,9 +5,9 @@ import Freelancing from "./components/organisms/Freelancing";
 import Home from "./components/organisms/Home";
 import Work from "./components/organisms/Work";
 import styles from "./Page.module.scss";
-import Footer from "./components/organisms/Contact";
 import { useAppContextProvider } from "./lib/AppContext";
 import { useEffect, useRef } from "react";
+import Contact from "./components/organisms/Contact";
 
 export default function Page() {
   const { allSections, section, setSection } = useAppContextProvider();
@@ -73,8 +73,8 @@ export default function Page() {
           <Freelancing />
         </div>
 
-        <div id={allSections.other}>
-          <Footer />
+        <div id={allSections.contact}>
+          <Contact />
         </div>
       </div>
     </AnimatePresence>

@@ -1,4 +1,4 @@
-export type TSection = "home" | "work" | "freelancing" | "other";
+export type TSection = "home" | "work" | "freelancing" | "contact";
 
 export interface IProjectCard {
   image: string;
