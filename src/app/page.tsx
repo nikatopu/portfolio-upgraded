@@ -58,6 +58,10 @@ export default function Page() {
     }
   }, [section]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <AnimatePresence mode="wait">
       <div className={styles.container}>

@@ -17,7 +17,7 @@ export interface IHeaderButton {
 export default function Header() {
   const { section, setSection, sidebarOpen, setSidebarOpen } =
     useAppContextProvider();
-  const [mobile, setMobile] = useState<boolean | null>(null);
+  const [mobile, setMobile] = useState<boolean | null>(false);
 
   useEffect(() => {
     const onResize = () => setMobile(window.innerWidth < 768);
