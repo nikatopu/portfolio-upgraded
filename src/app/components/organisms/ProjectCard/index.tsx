@@ -25,13 +25,7 @@ export default function ProjectCard({
     >
       <div className={style.imageContainer}>
         {image && <img src={image} alt={title} loading="lazy" />}
-        {!image && (
-          <img
-            src={"/assets/projects/other-projects/coming-soon.png"}
-            alt={title}
-            loading="lazy"
-          />
-        )}
+        {!image && <img src={comingSoon.src} alt={title} loading="lazy" />}
       </div>
 
       <div className={style.textsContainer}>
