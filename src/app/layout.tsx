@@ -7,6 +7,9 @@ import Gradients from "./components/organisms/Gradients";
 export const metadata: Metadata = {
   title: "Nikoloz | Portfolio",
   description: "Portfolio of Nikoloz, a Front-end Developer.",
+  icons: {
+    icon: "/assets/images/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +22,7 @@ export default function RootLayout({
       <AppContextProvider>
         <body>
           <Gradients />
-          
+
           <Header />
 
           {children}
