@@ -19,6 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* import font from google */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Leckerli+One&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <AppContextProvider>
         <body>
           <Gradients />

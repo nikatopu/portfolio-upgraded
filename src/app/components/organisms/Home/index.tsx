@@ -23,11 +23,23 @@ export default function Home() {
         <Title size="small">
           Check out the{" "}
           <b>
-            <a href="#">Figma</a>
+            <a
+              href="https://www.figma.com/design/fq6nxb8tl70br8xGiLtEwz/Portfolio-Website?node-id=0-1&t=tPm9VN9o4FCnL1eu-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Figma
+            </a>
           </b>{" "}
           or{" "}
           <b>
-            <a href="#">GitHub Repository</a>
+            <a
+              href="https://github.com/nikatopu/portfolio-upgraded"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Repository
+            </a>
           </b>{" "}
           of this <i>portfolio</i>
         </Title>
