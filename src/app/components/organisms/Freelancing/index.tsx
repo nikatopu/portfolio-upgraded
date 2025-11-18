@@ -124,7 +124,7 @@ export default function Freelancing() {
 
             <br />
 
-            <CheckSite link="https://devsdata.com/" />
+            <CheckSite link="https://anuka.live/" />
           </>
         }
       />
@@ -172,7 +172,7 @@ export default function Freelancing() {
 
             <br />
 
-            <CheckSite link="https://iberieli.com/home" />
+            <CheckSite link="https://www.geowonder.tours/" />
           </>
         }
       />
