@@ -24,6 +24,8 @@
 }
 
 .link {
+  color: unset;
+  text-decoration: none;
   border-bottom: 1px solid var(--accent-color);
   cursor: pointer;
 }

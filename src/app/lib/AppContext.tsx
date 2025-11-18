@@ -35,8 +35,17 @@ export default function AppContextProvider({ children }: IProps) {
       if (child.type === "i")
         return <span className={styles.italic}>{inner}</span>;
 
-      if (child.type === "a")
-        return <span className={styles.link}>{inner}</span>;
+      if (child.type === "a") {
+        // Apply the link attributes as well
+        return (
+          <a
+            className={styles.link}
+            {...(child as React.ReactElement<any>).props}
+          >
+            {inner}
+          </a>
+        );
+      }
     }
 
     return child;
