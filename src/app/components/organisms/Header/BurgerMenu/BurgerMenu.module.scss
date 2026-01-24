@@ -1,19 +1,11 @@
-.container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
 .burgerIcon {
   width: 2em;
   height: 2em;
   cursor: pointer;
 
   position: fixed;
-  top: 1.75em;
-  right: 1.75em;
+  top: 1em;
+  right: 2em;
 
   z-index: 10;
 }
@@ -33,9 +25,10 @@
   gap: 2em;
 
   transition: right 0.3s ease-in-out;
+  pointer-events: none;
 
   .navButton {
-    pointer-events: none;
+    pointer-events: all;
 
     font-size: 1.5em;
     font-weight: bold;

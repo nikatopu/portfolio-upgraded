@@ -1,4 +1,4 @@
-import { TProject } from "./types";
+import { TProject, TWorkExperience } from "./types";
 
 const selectedProjects: TProject[] = [
   {
@@ -63,12 +63,42 @@ const selectedProjects: TProject[] = [
   },
 ];
 
+const experiences: TWorkExperience[] = [
+  {
+    position: "Full-Stack Engineer",
+    company: "Glitch LLC",
+    description:
+      "Full-Stack developer working at Glitch LLC where I have already delivered 20+ small to big sized production projects to musicians all over the globe using next.js, typescript and MongoDB for the tech stack.",
+    period: "March 2025 - Present",
+    current: true,
+    companySite: "https://studio.glitch.ge/",
+  },
+  {
+    position: "Frontend Developer",
+    company: "DevsData LLC",
+    description:
+      "Improved Lighthouse score from ~60 to 90+, collaborated with QA testers, copywriters and developers to publish hundreds of articles, deployed and maintained production application using Docker and contributed to Python-based backend automation scripts.",
+    period: "October 2025 - June 2025",
+    current: false,
+    companySite: "https://devsdata.com/",
+  },
+  {
+    position: "Frontend Developer (Contract)",
+    company: "Iberieli LLC",
+    description:
+      "Designed and developed their custom website from ground-up while keeping contact with the head of the business. Ensured site responsiveness and cross-browser compatibility.",
+    period: "February 2024 - May 2024",
+    current: false,
+    companySite: "https://iberieli.com/",
+  },
+];
+
 const config = {
   email: "contact@nikatopu.dev",
   socials: {
-    github: "",
-    linkedin: "",
-    youtube: "",
+    github: "https://github.com/nikatopu",
+    linkedin: "https://www.linkedin.com/in/nikoloz-topuridze-258676270/",
+    youtube: "https://www.youtube.com/@topucodes",
   },
   techStack: [
     "Next.js",
@@ -79,7 +109,9 @@ const config = {
     "MongoDB",
     "PostgreSQL",
   ],
+  countExperienceFrom: new Date("2024-02-01"),
   selectedProjects,
+  experiences,
 };
 
 export default config;

@@ -8,7 +8,7 @@ type CardProps = {
 
 export default function Card({ project }: CardProps) {
   return (
-    <button className={style.container}>
+    <button className={style.container} onClick={project.onClick}>
       <img
         src={project.image}
         alt={project.title}

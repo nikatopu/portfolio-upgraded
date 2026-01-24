@@ -28,6 +28,10 @@ body {
   @media (min-width: 1400px) {
     font-size: 1.2vw;
   }
+
+  @media (max-width: 800px) {
+    font-size: 0.8em;
+  }
 }
 
 * {

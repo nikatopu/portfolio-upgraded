@@ -8,7 +8,7 @@ import BurgerMenu from "./BurgerMenu";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth <= 768 : false,
+    typeof window !== "undefined" ? window.innerWidth <= 768 : null,
   );
 
   function setPageSection(link: string) {
@@ -45,7 +45,7 @@ export default function Header() {
     <header className={style.container}>
       <TopuPortfolio />
 
-      {!isMobile && (
+      {isMobile === false && (
         <nav className={style.nav}>
           {headerButtons.map((button, index) => (
             <button
@@ -61,7 +61,7 @@ export default function Header() {
         </nav>
       )}
 
-      {isMobile && <BurgerMenu navButtons={headerButtons} />}
+      {isMobile === true && <BurgerMenu navButtons={headerButtons} />}
     </header>
   );
 }

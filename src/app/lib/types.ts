@@ -6,4 +6,15 @@ export type TProject = {
   onClick: () => void;
 };
 
-export interface IAppContextProps {}
+export type TWorkExperience = {
+  position: string;
+  company: string;
+  companySite?: string;
+  description: string;
+  period: string;
+  current: boolean;
+};
+
+export interface IAppContextProps {
+  experienceInYears: number;
+}

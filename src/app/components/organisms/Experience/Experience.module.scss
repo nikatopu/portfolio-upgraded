@@ -1,11 +1,13 @@
 .container {
+  width: 100%;
   min-height: var(--content-min-height);
+  background-color: var(--color-background-secondary);
 
   display: flex;
   flex-direction: column;
   gap: 2em;
 
-  padding: 4em 2em;
+  padding: 4em 0em;
 }
 
 .titleContainer {
@@ -16,21 +18,12 @@
   justify-content: space-between;
   align-items: flex-end;
 
-  @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5em;
-  }
+  padding: 0 2em;
 }
 
-.title > h2 {
+.titleContainer > h2 {
   font-size: 2em;
   font-weight: bold;
-}
-
-.title > p {
-  font-size: 1em;
-  color: var(--color-text-secondary);
 }
 
 .titleContainer > a {
@@ -38,6 +31,7 @@
   font-weight: bold;
   color: var(--color-accent);
   text-decoration: none;
+
   position: relative;
   transition: color 0.3s ease;
 
@@ -59,21 +53,9 @@
       width: 100%;
     }
   }
-
-  @media (max-width: 800px) {
-    width: 100%;
-    text-align: right;
-  }
 }
 
-.projectsContainer {
-  width: max-content;
-  max-width: min(75em, 100vw);
-
-  display: grid;
-  row-gap: 2em;
-  grid-template-columns: repeat(auto-fit, 24em);
-  justify-items: center;
-
-  margin: 0 auto;
+.experiencesContainer {
+  display: flex;
+  flex-direction: column;
 }
