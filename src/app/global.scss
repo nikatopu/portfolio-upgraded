@@ -10,6 +10,9 @@
   --color-primary: #1345b3;
   --color-accent: #1981ea;
   --color-secondary: #1e1e1e;
+
+  --header-height: 4em;
+  --content-min-height: calc(100svh - var(--header-height));
 }
 
 body {
@@ -29,4 +32,5 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }

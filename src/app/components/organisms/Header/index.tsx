@@ -19,9 +19,9 @@ export default function Header() {
   }
 
   const headerButtons: { label: string; onClick: () => void }[] = [
-    { label: "Projects", onClick: () => setPageSection("#home") },
-    { label: "Experience", onClick: () => setPageSection("#work") },
-    { label: "About", onClick: () => setPageSection("#freelancing") },
+    { label: "Projects", onClick: () => setPageSection("#projects") },
+    { label: "Experience", onClick: () => setPageSection("#experience") },
+    { label: "About", onClick: () => setPageSection("#about") },
     {
       label: "Contact Me",
       onClick: () => {
@@ -49,7 +49,7 @@ export default function Header() {
         <nav className={style.nav}>
           {headerButtons.map((button, index) => (
             <button
-              key={index}
+              key={button.label + index}
               className={
                 style.navButton + " " + (index === 3 ? style.contactMe : "")
               }

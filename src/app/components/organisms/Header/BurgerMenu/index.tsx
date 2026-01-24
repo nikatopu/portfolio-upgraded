@@ -22,7 +22,7 @@ export default function BurgerMenu({
       <nav className={style.nav} style={{ right: isOpen ? "0" : "-100%" }}>
         {navButtons.map((button, index) => (
           <button
-            key={index}
+            key={button.label + index + "burger"}
             className={style.navButton}
             onClick={() => {
               button.onClick();
