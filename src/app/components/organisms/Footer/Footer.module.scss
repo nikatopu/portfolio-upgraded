@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  border-top: 2px solid var(--color-secondary);
+  padding: 0.75em 2em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .copy {
+    font-size: 0.75em;
+    color: var(--color-text-secondary);
+
+    width: 30em;
+    text-align: right;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+.logoContainer {
+  width: 20em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    margin-right: 1.5em;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}

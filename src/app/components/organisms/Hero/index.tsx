@@ -68,11 +68,22 @@ export default function Hero() {
       </div>
 
       <div className={style.techStackContainer}>
-        {config.techStack.map((tech, index) => (
-          <p key={"tech" + index} className={style.techStackItem}>
-            {tech}
-          </p>
-        ))}
+        <motion.div
+          className={style.techStackTrack}
+          initial={{ x: "100%" }}
+          animate={{ x: "-100%" }}
+          transition={{
+            duration: 24,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {config.techStack.map((tech, index) => (
+            <p key={"tech" + index} className={style.techStackItem}>
+              {tech}
+            </p>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

@@ -1,12 +1,12 @@
 "use client";
 
 import { AnimatePresence } from "framer-motion";
-import styles from "./Page.module.scss";
 import Header from "./components/organisms/Header";
 import Hero from "./components/organisms/Hero";
 import SelectedProjects from "./components/organisms/SelectedProjects";
 import Experience from "./components/organisms/Experience";
 import About from "./components/organisms/About";
+import Footer from "./components/organisms/Footer";
 
 export default function Page() {
   return (
@@ -20,6 +20,8 @@ export default function Page() {
       <Experience key={"Experience"} />
 
       <About key={"About"} />
+
+      <Footer key={"Footer"} />
     </AnimatePresence>
   );
 }
