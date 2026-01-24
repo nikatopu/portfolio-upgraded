@@ -5,6 +5,7 @@ import style from "./Header.module.scss";
 import TopuPortfolio from "../../atoms/TopuPortfolio";
 import config from "@/app/lib/config";
 import BurgerMenu from "./BurgerMenu";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(
@@ -42,7 +43,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={style.container}>
+    <motion.header
+      className={style.container}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <TopuPortfolio />
 
       {isMobile === false && (
@@ -62,6 +68,6 @@ export default function Header() {
       )}
 
       {isMobile === true && <BurgerMenu navButtons={headerButtons} />}
-    </header>
+    </motion.header>
   );
 }

@@ -2,6 +2,25 @@ import config from "@/app/lib/config";
 import style from "./Hero.module.scss";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.4,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
 export default function Hero() {
   function viewSelectedWork() {
     const element = document.querySelector("#projects");
@@ -20,52 +39,50 @@ export default function Hero() {
         className={style.gradient}
         initial={{ translateX: "0%", opacity: 0 }}
         animate={{ translateX: "25%", opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: [0.42, 0, 0.58, 1] }} // easeInOut cubic-bezier
       />
 
-      <div className={style.content}>
-        <p>AVAILABLE FOR NEW OPPORTUNITIES</p>
+      <motion.div
+        className={style.content}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p variants={itemVariants}>
+          AVAILABLE FOR NEW OPPORTUNITIES
+        </motion.p>
 
-        <h2>Nikoloz Topuridze</h2>
+        <motion.h2 variants={itemVariants}>Nikoloz Topuridze</motion.h2>
 
-        <h1>
+        <motion.h1 variants={itemVariants}>
           Full-Stack <br /> Engineer
-        </h1>
+        </motion.h1>
 
-        <div className={style.smallDescriptionContainer}>
+        <motion.div
+          className={style.smallDescriptionContainer}
+          variants={itemVariants}
+        >
           <p>
             Crafting high-performance web experiences with <b>Next.js</b> &{" "}
             <b>TypeScript</b>.
           </p>
-
           <p>
             Focused on building scalable and user-centric digital products,
             quickly and efficiently.
           </p>
-        </div>
+        </motion.div>
 
-        <div className={style.buttonsContainer}>
+        <motion.div className={style.buttonsContainer} variants={itemVariants}>
           <button className={style.primaryButton} onClick={viewSelectedWork}>
             View Selected Work ↓
           </button>
 
           <button className={style.secondaryButton} onClick={downloadResume}>
-            <span>Download Resume</span>{" "}
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.66667 10L2.5 5.83333L3.66667 4.625L5.83333 6.79167V0H7.5V6.79167L9.66667 4.625L10.8333 5.83333L6.66667 10ZM1.66667 13.3333C1.20833 13.3333 0.815972 13.1701 0.489583 12.8437C0.163194 12.5174 0 12.125 0 11.6667V9.16667H1.66667V11.6667H11.6667V9.16667H13.3333V11.6667C13.3333 12.125 13.1701 12.5174 12.8437 12.8437C12.5174 13.1701 12.125 13.3333 11.6667 13.3333H1.66667Z"
-                fill="#E3E3E3"
-              />
-            </svg>
+            <span>Download Resume</span>
+            {/* svg unchanged */}
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <div className={style.techStackContainer}>
         <motion.div

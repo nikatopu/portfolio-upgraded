@@ -1,5 +1,6 @@
 import { TWorkExperience } from "@/app/lib/types";
 import style from "./Job.module.scss";
+import { motion } from "framer-motion";
 
 type Props = {
   experience: TWorkExperience;
@@ -7,7 +8,7 @@ type Props = {
 
 export default function Job({ experience }: Props) {
   return (
-    <div className={style.container}>
+    <motion.div className={style.container} transition={{ duration: 0.2 }}>
       <div className={style.symbol}>
         <div
           className={
@@ -31,7 +32,7 @@ export default function Job({ experience }: Props) {
               rel="noreferrer noopener"
               className={style.companyLink}
             >
-              {experience.company + " ↗"} 
+              {experience.company + " ↗"}
             </a>
           ) : (
             experience.company
@@ -42,6 +43,6 @@ export default function Job({ experience }: Props) {
       </div>
 
       <p className={style.period}>{experience.period}</p>
-    </div>
+    </motion.div>
   );
 }
