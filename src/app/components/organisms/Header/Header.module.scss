@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  padding: 1em 2em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.navButton {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--color-text);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.contactMe {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--color-text);
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+  }
+}

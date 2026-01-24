@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Nikoloz | Portfolio",
   description: "Portfolio of Nikoloz, a Full-Stack Developer.",
   icons: {
-    icon: "/assets/images/icon.png",
+    icon: "/assets/images/icon.svg",
   },
 };
 

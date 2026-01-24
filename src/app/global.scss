@@ -13,9 +13,14 @@
 }
 
 body {
+  position: relative;
+
   font-family: var(--body-font);
   margin: 0;
   padding: 0;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
 
   @media (min-width: 1400px) {
     font-size: 1.2vw;
