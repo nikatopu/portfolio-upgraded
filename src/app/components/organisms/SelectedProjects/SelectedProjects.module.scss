@@ -67,17 +67,25 @@
 }
 
 .projectsContainer {
-  width: max-content;
-  max-width: min(75em, 100vw);
+  width: 100%;
+  max-width: 70em;
 
   display: grid;
-  row-gap: 2em;
-  grid-template-columns: repeat(auto-fit, 24em);
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, 20em); /* card width */
+  gap: 1.5em;
 
+  justify-content: center; /* centers the grid block */
   margin: 0 auto;
 
-  @media (max-width: 400px) {
-    grid-template-columns: repeat(auto-fit, min(20em, 80vw));
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 2000px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @media (min-width: 2800px) {
+    grid-template-columns: repeat(6, 1fr);
   }
 }

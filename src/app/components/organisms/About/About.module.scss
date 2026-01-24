@@ -62,11 +62,12 @@
 .imageContainer {
   position: relative;
   margin-right: 4em;
+  margin-top: 2em;
 }
 
 .myImage {
   width: 100%;
-  max-width: 30em;
+  max-width: 18em;
   aspect-ratio: 1/1;
   object-fit: cover;
 
