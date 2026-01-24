@@ -16,12 +16,18 @@ export default function AppContextProvider({ children }: IProps) {
   useEffect(() => {
     const startDate = config.countExperienceFrom;
     const currentDate = new Date();
+
     const diffInMs = currentDate.getTime() - startDate.getTime();
     const diffInYears = diffInMs / (1000 * 60 * 60 * 24 * 365.25);
-    setExperienceInYears(Math.floor(diffInYears));
+
+    setExperienceInYears(Math.round(diffInYears));
   }, []);
 
-  return <AppContext.Provider value={{ experienceInYears }}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ experienceInYears }}>
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 export const useAppContextProvider = () => {

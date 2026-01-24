@@ -6,6 +6,7 @@ import Header from "./components/organisms/Header";
 import Hero from "./components/organisms/Hero";
 import SelectedProjects from "./components/organisms/SelectedProjects";
 import Experience from "./components/organisms/Experience";
+import About from "./components/organisms/About";
 
 export default function Page() {
   return (
@@ -17,6 +18,8 @@ export default function Page() {
       <SelectedProjects key={"SelectedProjects"} />
 
       <Experience key={"Experience"} />
+
+      <About key={"About"} />
     </AnimatePresence>
   );
 }
