@@ -1,33 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Leckerli+One&display=swap");
-
 :root {
-  --accent-color: #9c8dd0;
-  --text-color: #f6f8fa;
-  --bg-color: #2b2b2b;
-  --bg-dark-color: #222222;
-  --bg-light-color: #3f424a;
-  --bg-button: #6d7b97;
+  --body-font: "Space Grotesk", sans-serif;
 
-  --text-font: "Alexandria", sans-serif;
-  --emphasis-font: "Leckerli One", cursive;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
 
-  --shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  --color-background: #121212;
+  --color-background-secondary: #161616;
 
-  --side-padding: 2em;
-  --header-height: 4em;
+  --color-primary: #1345b3;
+  --color-accent: #1981ea;
+  --color-secondary: #1e1e1e;
 }
 
 body {
-  font-family: var(--text-font);
+  font-family: var(--body-font);
   margin: 0;
   padding: 0;
-
-  color: var(--text-color);
-  background-color: var(--bg-color);
-
-  width: 100vw;
-  overflow-x: hidden;
-  position: relative;
 
   @media (min-width: 1400px) {
     font-size: 1.2vw;
@@ -36,5 +24,4 @@ body {
 
 * {
   box-sizing: border-box;
-  // border: 1px solid red !important; /* Debugging aid, remove later */
 }
