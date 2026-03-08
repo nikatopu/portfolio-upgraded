@@ -2,19 +2,19 @@ import { TProject, TWorkExperience } from "./types";
 
 const selectedProjects: TProject[] = [
   {
-    title: "Lite Particles Node Module",
+    title: "Abaula Gaming",
     description:
-      "A lightweight and efficient particle system for Node.js applications delivered as a NPM package.",
-    image: "/assets/projects/react-particles-lite.jpg",
-    tags: ["TypeScript", "Node.js", "NPM", "HTMLCanvas"],
+      "An interactive Canvas-based prize game platform where users participate in event-based competitions to win real rewards. Features dynamic event configuration, magnifier tools, line drawing mechanics, multilingual support, and backend-driven gameplay using ticketed user events.",
+    image: "/assets/projects/abaula-gaming.jpg",
+    tags: ["Next.js", "TypeScript", "Canvas API", "Game Logic"],
     onClick: () => {
-      window.open("https://particles-lite-review.nikatopu.dev/", "_blank");
+      window.open("https://abaulagaming.ge", "_blank");
     },
   },
   {
     title: "Anuka Live Musician Site",
     description:
-      "A modern and responsive website for Anuka, a live musician, showcasing her music, upcoming events, blogs and media.",
+      "A full-stack musician platform with a custom admin dashboard allowing non-technical users to manage events, media, and blog content dynamically.",
     image: "/assets/projects/anukalive.jpg",
     tags: ["React", "Express", "Cloudinary", "Porkbun"],
     onClick: () => {
@@ -24,7 +24,7 @@ const selectedProjects: TProject[] = [
   {
     title: "GeoWonder Tourism Platform",
     description:
-      "A tourism agency platform connecting travelers with unique local experiences and guided tours in Georgia.",
+      "A full-stack tourism platform showcasing curated travel experiences across Georgia, featuring custom content management, responsive design, and scalable data handling for tour listings and destinations.",
     image: "/assets/projects/geowonder.jpg",
     tags: ["Next.js", "Typescript", "Prisma", "Figma"],
     onClick: () => {
@@ -32,19 +32,19 @@ const selectedProjects: TProject[] = [
     },
   },
   {
-    title: "Abaula Gaming",
+    title: "Pop Girl Summer",
     description:
-      "A 'guess the ball' website for Abaula, where there will be custom giveaway events with real big prizes",
-    image: "/assets/projects/abaula-gaming.jpg",
-    tags: ["Next.js", "TypeScript", "HTMLCanvas"],
+      "A high-traffic campaign platform built for Universal Music Group featuring daily challenges, user engagement mechanics, and API-driven content updates.",
+    image: "/assets/projects/glitch/popgirlsummer.jpg",
+    tags: ["Next.js", "TypeScript", "API Integration"],
     onClick: () => {
-      window.open("https://abaulagaming.ge", "_blank");
+      window.open("https://dmi.umgapps.com/popgirlsummer/hub", "_blank");
     },
   },
   {
     title: "Cynthia Erivo Journal",
     description:
-      "A site for Cynthia Erivo fans to read her latest news and updates done @ Glitch LLC.",
+      "A content platform delivering official news and updates for Cynthia Erivo fans, built as part of a large-scale music marketing campaign.",
     image: "/assets/projects/glitch/cynthia-erivo.jpg",
     tags: ["Next.js", "TypeScript", "HTMLCanvas"],
     onClick: () => {
@@ -52,13 +52,13 @@ const selectedProjects: TProject[] = [
     },
   },
   {
-    title: "Pop Girl Summer",
+    title: "Lite Particles Node Module",
     description:
-      "A vibrant and engaging website for UMG, featuring daily challenges for team matches.",
-    image: "/assets/projects/glitch/popgirlsummer.jpg",
-    tags: ["Next.js", "TypeScript", "API Integration"],
+      "A lightweight particle system library published as an NPM package, enabling efficient Canvas-based visual effects for Node.js and frontend applications.",
+    image: "/assets/projects/react-particles-lite.jpg",
+    tags: ["TypeScript", "Node.js", "NPM", "HTMLCanvas"],
     onClick: () => {
-      window.open("https://dmi.umgapps.com/popgirlsummer/", "_blank");
+      window.open("https://particles-lite-review.nikatopu.dev/", "_blank");
     },
   },
 ];
@@ -68,7 +68,7 @@ const experiences: TWorkExperience[] = [
     position: "Full-Stack Engineer",
     company: "Glitch LLC",
     description:
-      "Full-Stack developer working at Glitch LLC where I have already delivered 20+ small to big sized production projects to musicians all over the globe using next.js, typescript and MongoDB for the tech stack.",
+      "Full-Stack engineer delivering 20+ production projects and marketing platforms used by thousands of users worldwide. Built systems using Next.js, TypeScript, and MongoDB including quizzes, campaign platforms, and content experiences for global music artists.",
     period: "March 2025 - Present",
     current: true,
     companySite: "https://studio.glitch.ge/",
@@ -78,7 +78,7 @@ const experiences: TWorkExperience[] = [
     company: "DevsData LLC",
     description:
       "Improved Lighthouse score from ~60 to 90+, collaborated with QA testers, copywriters and developers to publish hundreds of articles, deployed and maintained production application using Docker and contributed to Python-based backend automation scripts.",
-    period: "October 2025 - June 2025",
+    period: "October 2024 - June 2025",
     current: false,
     companySite: "https://devsdata.com/",
   },
@@ -87,7 +87,7 @@ const experiences: TWorkExperience[] = [
     company: "Iberieli LLC",
     description:
       "Designed and developed their custom website from ground-up while keeping contact with the head of the business. Ensured site responsiveness and cross-browser compatibility.",
-    period: "February 2024 - May 2024",
+    period: "December 2023 - May 2024",
     current: false,
     companySite: "https://iberieli.com/",
   },
@@ -109,7 +109,7 @@ const config = {
     "MongoDB",
     "PostgreSQL",
   ],
-  countExperienceFrom: new Date("2024-02-01"),
+  countExperienceFrom: new Date("2023-09-01"),
   selectedProjects,
   experiences,
 };
