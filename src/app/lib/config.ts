@@ -18,7 +18,7 @@ const selectedProjects: TProject[] = [
     image: "/assets/projects/anukalive.jpg",
     tags: ["React", "Express", "Cloudinary", "Porkbun"],
     onClick: () => {
-      window.open("https://www.anukalive.com/", "_blank");
+      window.open("https://www.anuka.live/", "_blank");
     },
   },
   {
