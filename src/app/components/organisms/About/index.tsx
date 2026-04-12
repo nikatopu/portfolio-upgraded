@@ -36,7 +36,7 @@ export default function About() {
         <h2>About Me</h2>
 
         <motion.p variants={itemVariants}>
-          I am a Full-Stack Developer based in Georgia, Tbilisi. With over {experienceInYears}
+          I am a Full-Stack Developer based in Georgia, Tbilisi. With over {experienceInYears}{" "}
           years of experience, I specialize in the React ecosystem, specifically
           leveraging Next.js and Typescript to build lightning-fast web
           applications.
