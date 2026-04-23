@@ -1,4 +1,4 @@
-import { Coordinates } from "../hooks/useImageInteraction";
+import { Coordinates } from "../../hooks/useImageInteraction";
 
 export interface DisplayCoordinates {
   left: number;
