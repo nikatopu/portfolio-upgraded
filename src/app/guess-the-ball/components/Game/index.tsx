@@ -189,6 +189,20 @@ export default function Game() {
       />
 
       <div className={style.content}>
+        <div className={style.header}>
+          <h2 className={style.title}>Spot The Ball - Portfolio Showcase</h2>
+          <p>
+            To visit the real interactive game, go to{" "}
+            <a
+              href="https://abaulagaming.ge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              abaulagaming.ge
+            </a>
+          </p>
+        </div>
+
         <div className={style.innerContent}>
           <div className={style.left}>
             <ToolSelector

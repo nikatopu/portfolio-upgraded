@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "A complex game where you guess where the ball is hidden in an image. Features magnification, line drawing, and precise coordinate tracking.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/assets/images/icon.svg",
   },
 };
 

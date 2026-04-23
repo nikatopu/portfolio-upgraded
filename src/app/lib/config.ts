@@ -4,11 +4,11 @@ const selectedProjects: TProject[] = [
   {
     title: "Abaula Gaming",
     description:
-      "An interactive Canvas-based prize game platform where users participate in event-based competitions to win real rewards. Features dynamic event configuration, magnifier tools, line drawing mechanics, multilingual support, and backend-driven gameplay using ticketed user events.",
+      "An interactive Canvas-based prize game platform where users participate in event-based competitions to win real rewards.",
     image: "/assets/projects/abaula-gaming.jpg",
     tags: ["Next.js", "TypeScript", "Canvas API", "Game Logic"],
     onClick: () => {
-      window.open("https://abaulagaming.ge", "_blank");
+      window.open("/guess-the-ball", "_blank");
     },
   },
   {
