@@ -2,33 +2,33 @@ import { TProject, TWorkExperience } from "./types";
 
 const selectedProjects: TProject[] = [
   {
+    title: "Mathematical Animations",
+    description:
+      "A collection of mathematical particle animations demonstrating various algorithms and visual effects using Canvas API.",
+    image: "/assets/projects/mathematical-animations.jpg",
+    tags: ["TypeScript", "Next.js", "HTMLCanvas"],
+    onClick: () => {
+      window.open("/math-animations", "_self");
+    },
+  },
+  {
+    title: "Lite Particles Node Module",
+    description:
+      "A lightweight particle system library published as an NPM package, enabling efficient Canvas-based visual effects for Node.js and frontend applications.",
+    image: "/assets/projects/react-particles-lite.jpg",
+    tags: ["TypeScript", "Node.js", "NPM", "HTMLCanvas"],
+    onClick: () => {
+      window.open("https://particles-lite-review.nikatopu.dev/", "_blank");
+    },
+  },
+  {
     title: "Abaula Gaming",
     description:
       "An interactive Canvas-based prize game platform where users participate in event-based competitions to win real rewards.",
     image: "/assets/projects/abaula-gaming.jpg",
     tags: ["Next.js", "TypeScript", "Canvas API", "Game Logic"],
     onClick: () => {
-      window.open("/guess-the-ball", "_blank");
-    },
-  },
-  {
-    title: "Anuka Live Musician Site",
-    description:
-      "A full-stack musician platform with a custom admin dashboard allowing non-technical users to manage events, media, and blog content dynamically.",
-    image: "/assets/projects/anukalive.jpg",
-    tags: ["React", "Express", "Cloudinary", "Porkbun"],
-    onClick: () => {
-      window.open("https://www.anuka.live/", "_blank");
-    },
-  },
-  {
-    title: "GeoWonder Tourism Platform",
-    description:
-      "A full-stack tourism platform showcasing curated travel experiences across Georgia, featuring custom content management, responsive design, and scalable data handling for tour listings and destinations.",
-    image: "/assets/projects/geowonder.jpg",
-    tags: ["Next.js", "Typescript", "Prisma", "Figma"],
-    onClick: () => {
-      window.open("https://geowonder.tours/", "_blank");
+      window.open("/guess-the-ball", "_self");
     },
   },
   {
@@ -52,13 +52,23 @@ const selectedProjects: TProject[] = [
     },
   },
   {
-    title: "Lite Particles Node Module",
+    title: "Anuka Live Musician Site",
     description:
-      "A lightweight particle system library published as an NPM package, enabling efficient Canvas-based visual effects for Node.js and frontend applications.",
-    image: "/assets/projects/react-particles-lite.jpg",
-    tags: ["TypeScript", "Node.js", "NPM", "HTMLCanvas"],
+      "A full-stack musician platform with a custom admin dashboard allowing non-technical users to manage events, media, and blog content dynamically.",
+    image: "/assets/projects/anukalive.jpg",
+    tags: ["React", "Express", "Cloudinary", "Porkbun"],
     onClick: () => {
-      window.open("https://particles-lite-review.nikatopu.dev/", "_blank");
+      window.open("https://www.anuka.live/", "_blank");
+    },
+  },
+  {
+    title: "GeoWonder Tourism Platform",
+    description:
+      "A full-stack tourism platform showcasing curated travel experiences across Georgia, featuring custom content management, responsive design, and scalable data handling for tour listings and destinations.",
+    image: "/assets/projects/geowonder.jpg",
+    tags: ["Next.js", "Typescript", "Prisma", "Figma"],
+    onClick: () => {
+      window.open("https://geowonder.tours/", "_blank");
     },
   },
 ];
