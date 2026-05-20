@@ -2,6 +2,16 @@ import { TProject, TWorkExperience } from "./types";
 
 const selectedProjects: TProject[] = [
   {
+    title: "Dialogue Forge",
+    description:
+      "A visual dialogue graph editor for branching narrative games and visual novels featuring node-based editing, dynamic schemas, graph validation, simulation mode and JSON export.",
+    image: "/assets/projects/dialogue-forge.jpg",
+    tags: ["Next.js", "TypeScript", "Zustand", "JSON"],
+    onClick: () => {
+      window.open("https://dialogue-forge.nikatopu.dev/", "_blank");
+    },
+  },
+  {
     title: "Mathematical Animations",
     description:
       "A collection of mathematical particle animations demonstrating various algorithms and visual effects using Canvas API.",
