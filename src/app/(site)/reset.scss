@@ -27,3 +27,54 @@ svg,
 canvas {
   max-width: 100%;
 }
+
+/* Thin scrollbars in the paper palette. Mostly visible on Windows/Linux; macOS overlay bars stay native.
+   scrollbar-color is inherited, so dialogs, textareas and lists match the page. */
+html {
+  color-scheme: light;
+  scrollbar-color: #c9bfa9 #f3f0ea; /* thumb, track */
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  scrollbar-color: #4a443a #121211;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+/* Browsers without scrollbar-color (older Chromium, Safari) use the WebKit pseudo-elements. */
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f3f0ea;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c9bfa9;
+    border: 3px solid #f3f0ea;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a99f8a;
+  }
+
+  html[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #121211;
+  }
+
+  html[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #4a443a;
+    border-color: #121211;
+  }
+
+  html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: #5e574b;
+  }
+}

@@ -394,3 +394,19 @@
   font-size: 0.8rem;
   color: var(--muted);
 }
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.diceIcon {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.4s var(--ease);
+}
+
+.linkBtn:hover .diceIcon {
+  transform: rotate(90deg);
+}

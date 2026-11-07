@@ -10,8 +10,6 @@
     "contact": "Get a quote",
     "toLight": "Switch to light mode",
     "toDark": "Switch to dark mode",
-    "soundOn": "Turn UI sounds on",
-    "soundOff": "Turn UI sounds off",
     "otherLanguage": "ქართ",
     "otherLanguageLabel": "ქართულად"
   },
@@ -235,7 +233,6 @@
     "shapeCircle": "Circle",
     "shapeSquare": "Square",
     "shapeHex": "Hexagon",
-    "shuffle": "Shuffle",
     "download": "Download PNG",
     "moreTitle": "More experiments",
     "more": [
@@ -247,7 +244,8 @@
         "title": "Guess the ball",
         "text": "A spot-the-ball game prototype."
       }
-    ]
+    ],
+    "randomize": "Randomize seed"
   },
   "notes": {
     "label": "Visitor log",

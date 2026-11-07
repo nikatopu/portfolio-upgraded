@@ -65,6 +65,17 @@
   flex-wrap: wrap;
   gap: 8px;
 
+  // small screens: the four contact methods as an even 2×2 grid
+  @media (max-width: 560px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    button {
+      width: 100%;
+      padding-block: 11px;
+    }
+  }
+
   button {
     padding: 8px 14px;
     border: 1px solid var(--folder-edge);

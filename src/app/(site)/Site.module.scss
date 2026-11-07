@@ -2,6 +2,7 @@
 
 .root {
   --paper: #f3f0ea;
+  --cream: #ede5d4; // alternate section background
   --paper-raised: #fbfaf6;
   --folder: #e7ddc8;
   --folder-edge: #d3c5a8;
@@ -49,7 +50,7 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 45; // above the section bands (below the header), so the paper texture covers everything
     opacity: var(--grain-opacity);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
@@ -77,6 +78,7 @@
 
 :global(html[data-theme="dark"]) .root {
   --paper: #121211;
+  --cream: #1b1a16;
   --paper-raised: #1a1a18;
   --folder: #24211c;
   --folder-edge: #3a342b;

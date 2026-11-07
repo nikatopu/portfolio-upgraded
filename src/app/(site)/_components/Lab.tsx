@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import type { UI } from "@/lib/content";
 import { DEFAULT_STAMP, STAMP_SHAPES, randomSeed, type StampParams, type StampShape } from "../_lib/stamp";
-import { useSound } from "../_lib/sound";
+import DiceIcon from "./DiceIcon";
 import SectionHead from "./SectionHead";
 import Stamp from "./Stamp";
 import sec from "./Section.module.scss";
@@ -14,7 +14,7 @@ type Props = { ui: UI["lab"]; ringLabel: string };
 export default function Lab({ ui, ringLabel }: Props) {
   const [params, setParams] = useState<StampParams>(DEFAULT_STAMP);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { play } = useSound();
+  const [rolls, setRolls] = useState(0); // drives the dice turning on each roll
 
   const shapeLabel: Record<StampShape, string> = { circle: ui.shapeCircle, square: ui.shapeSquare, hex: ui.shapeHex };
 
@@ -29,12 +29,11 @@ export default function Lab({ ui, ringLabel }: Props) {
     a.href = canvas.toDataURL("image/png");
     a.download = `stamp-${params.seed}.png`;
     a.click();
-    play("tick");
   }
 
   return (
     <section className={sec.section} id="lab">
-      <SectionHead index="03" label={ui.label} title={ui.title} intro={ui.intro} />
+      <SectionHead title={ui.title} intro={ui.intro} />
 
       <div className={s.maker} data-reveal>
         <div className={s.preview}>
@@ -43,10 +42,27 @@ export default function Lab({ ui, ringLabel }: Props) {
         </div>
 
         <div className={s.controls}>
-          <label className={s.field}>
-            <span>{ui.seed}</span>
-            <input value={params.seed} maxLength={40} onChange={(e) => update({ seed: e.target.value || " " })} spellCheck={false} />
-          </label>
+          <div className={s.field}>
+            <label htmlFor="stamp-seed">
+              <span>{ui.seed}</span>
+            </label>
+            <div className={s.seedRow}>
+              <input id="stamp-seed" value={params.seed} maxLength={40} onChange={(e) => update({ seed: e.target.value || " " })} spellCheck={false} />
+              <button
+                type="button"
+                className={s.dice}
+                style={{ "--roll": `${rolls * 180}deg` } as React.CSSProperties}
+                onClick={() => {
+                  setRolls((n) => n + 1);
+                  update({ seed: randomSeed() });
+                }}
+                aria-label={ui.randomize}
+                title={ui.randomize}
+              >
+                <DiceIcon />
+              </button>
+            </div>
+          </div>
 
           <label className={s.field}>
             <span>
@@ -66,7 +82,7 @@ export default function Lab({ ui, ringLabel }: Props) {
             <legend>{ui.shape}</legend>
             <div className={s.chips}>
               {STAMP_SHAPES.map((shape) => (
-                <button key={shape} type="button" aria-pressed={params.shape === shape} onClick={() => { update({ shape }); play("tick"); }}>
+                <button key={shape} type="button" aria-pressed={params.shape === shape} onClick={() => { update({ shape }); }}>
                   {shapeLabel[shape]}
                 </button>
               ))}
@@ -74,10 +90,7 @@ export default function Lab({ ui, ringLabel }: Props) {
           </fieldset>
 
           <div className={s.actions}>
-            <button type="button" className={s.primary} onClick={() => { update({ seed: randomSeed() }); play("stamp"); }}>
-              {ui.shuffle}
-            </button>
-            <button type="button" className={s.secondary} onClick={download}>
+            <button type="button" className={s.primary} onClick={download}>
               {ui.download}
             </button>
           </div>

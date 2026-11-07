@@ -5,10 +5,23 @@
   min-height: min(calc(100svh - var(--header-h)), 940px);
   display: flex;
   flex-direction: column;
+  background: var(--cream);
+  box-shadow: 0 0 0 100vmax var(--cream);
+  clip-path: inset(0 -100vmax);
+
+  // phones: no full-screen height (it left a large empty gap between the name and the copy)
+  @media (max-width: 760px) {
+    min-height: 0;
+  }
 }
 
 .eyebrow {
   margin-top: clamp(48px, 11vh, 120px);
+
+  @media (max-width: 760px) {
+    margin-top: 36px;
+  }
+
   font: 500 0.8rem/1.2 var(--font-mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -126,9 +139,23 @@
 .stampWrap {
   justify-self: end;
 
+  // On phones the stamp is pressed over the end of the name, like a real rubber stamp on paper.
   @media (max-width: 760px) {
-    display: none;
+    order: -1;
+    position: relative;
+    z-index: 0;
+    margin: -96px -6px -20px auto;
+    mix-blend-mode: multiply;
+
+    canvas {
+      width: 132px !important;
+      height: 132px !important;
+    }
   }
+}
+
+:global(html[data-theme="dark"]) .stampWrap {
+  mix-blend-mode: screen;
 }
 
 .stamp {

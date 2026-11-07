@@ -10,8 +10,6 @@
     "contact": "",
     "toLight": "",
     "toDark": "",
-    "soundOn": "",
-    "soundOff": "",
     "otherLanguage": "",
     "otherLanguageLabel": ""
   },
@@ -235,7 +233,6 @@
     "shapeCircle": "",
     "shapeSquare": "",
     "shapeHex": "",
-    "shuffle": "",
     "download": "",
     "moreTitle": "",
     "more": [
@@ -247,7 +244,8 @@
         "title": "",
         "text": ""
       }
-    ]
+    ],
+    "randomize": ""
   },
   "notes": {
     "label": "",

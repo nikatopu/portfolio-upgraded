@@ -7,7 +7,6 @@ import { useRef, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform, type MotionValue } from "motion/react";
 import type { CaseStudy, Lang, UI } from "@/lib/content";
 import { href } from "../_lib/paths";
-import { useSound } from "../_lib/sound";
 import Stamp from "./Stamp";
 import s from "./FolderStack.module.scss";
 
@@ -30,7 +29,6 @@ export default function FolderStack({ cases, ui, lang }: Props) {
 function Folder({ item, index, count, progress, ui, lang }: { item: Item; index: number; count: number; progress: MotionValue<number>; ui: UI["work"]; lang: Lang }) {
   const router = useRouter();
   const reduce = useReducedMotion();
-  const { play } = useSound();
   const [opening, setOpening] = useState(false);
 
   // Earlier folders sink back slightly as later ones slide over them.
@@ -43,7 +41,6 @@ function Folder({ item, index, count, progress, ui, lang }: { item: Item; index:
 
   function open(e: React.MouseEvent<HTMLAnchorElement>) {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return; // allow new-tab etc.
-    play("paper");
     if (reduce) return;
     e.preventDefault();
     setOpening(true);
@@ -53,7 +50,7 @@ function Folder({ item, index, count, progress, ui, lang }: { item: Item; index:
   return (
     <div className={s.slot} style={{ "--i": index } as React.CSSProperties}>
       <motion.div className={s.folderMotion} style={reduce ? undefined : { scale }}>
-        <Link href={link} className={`${s.folder} ${opening ? s.opening : ""}`} onClick={open} onMouseEnter={() => play("tick")}>
+        <Link href={link} className={`${s.folder} ${opening ? s.opening : ""}`} onClick={open}>
           {/* back panel with its tab */}
           <span className={s.back} aria-hidden>
             <span className={s.tab}>

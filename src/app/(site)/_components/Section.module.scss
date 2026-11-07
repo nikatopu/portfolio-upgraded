@@ -1,8 +1,15 @@
 .section {
   max-width: var(--max);
   margin: 0 auto;
-  padding: clamp(72px, 11vw, 140px) var(--gutter) 0;
+  padding: clamp(64px, 9vw, 120px) var(--gutter);
   scroll-margin-top: var(--header-h);
+}
+
+// Alternating background: the content stays in its column, the colour runs edge to edge.
+.cream {
+  background: var(--cream);
+  box-shadow: 0 0 0 100vmax var(--cream);
+  clip-path: inset(0 -100vmax);
 }
 
 .head {
@@ -11,22 +18,10 @@
   gap: 16px 48px;
   align-items: end;
   margin-bottom: clamp(36px, 5vw, 64px);
-  padding-top: 18px;
-  border-top: 1px solid var(--ink);
 
   @media (max-width: 760px) {
     grid-template-columns: 1fr;
   }
-}
-
-.label {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  font: 500 0.72rem/1 var(--font-mono);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 
 .title {

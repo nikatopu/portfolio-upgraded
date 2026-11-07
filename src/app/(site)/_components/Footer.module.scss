@@ -1,7 +1,10 @@
 .footer {
   max-width: var(--max);
-  margin: clamp(96px, 14vw, 180px) auto 0;
-  padding: 0 var(--gutter) 40px;
+  margin: 0 auto;
+  padding: clamp(64px, 9vw, 120px) var(--gutter) 40px;
+  background: var(--cream);
+  box-shadow: 0 0 0 100vmax var(--cream);
+  clip-path: inset(0 -100vmax);
 }
 
 .big {

@@ -4,7 +4,6 @@ import { useRef, useState, useTransition } from "react";
 import type { Lang, Site, UI } from "@/lib/content";
 import type { ActionError } from "@/lib/validation";
 import { submitLead } from "../_actions";
-import { useSound } from "../_lib/sound";
 import SectionHead from "./SectionHead";
 import Select from "./Select";
 import Turnstile, { type TurnstileHandle } from "./Turnstile";
@@ -27,7 +26,6 @@ function trackClick(method: Method, lang: Lang) {
 }
 
 export default function Contact({ ui, contact, lang }: Props) {
-  const { play } = useSound();
   const [name, setName] = useState("");
   const [business, setBusiness] = useState("");
   const [need, setNeed] = useState("");
@@ -59,7 +57,6 @@ export default function Contact({ ui, contact, lang }: Props) {
       const res = await submitLead({ name, business, need, message, method, handle, lang, token, startedAt: startedAt.current, website });
       if (res.ok) {
         setSent(true);
-        play("stamp");
       } else {
         setError(res.error);
         turnstile.current?.reset();
@@ -69,7 +66,7 @@ export default function Contact({ ui, contact, lang }: Props) {
 
   return (
     <section className={sec.section} id="contact">
-      <SectionHead index="05" label={ui.label} title={ui.title} intro={ui.intro} />
+      <SectionHead title={ui.title} intro={ui.intro} />
 
       <div className={s.grid}>
         <form className={s.form} data-reveal onSubmit={submit} aria-busy={pending}>
@@ -164,7 +161,6 @@ export default function Contact({ ui, contact, lang }: Props) {
               className={s.method}
               onClick={() => {
                 trackClick(d.id, lang);
-                play("tick");
               }}
             >
               <span className={s.methodName}>{METHOD_LABEL[d.id]}</span>

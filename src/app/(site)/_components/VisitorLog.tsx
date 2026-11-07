@@ -7,7 +7,7 @@ import type { ActionError } from "@/lib/validation";
 import { submitNote } from "../_actions";
 import { NOTE_ROLES, type Doodle, type NoteRole } from "../_lib/notes";
 import { randomSeed, STAMP_SHAPES, type StampParams } from "../_lib/stamp";
-import { useSound } from "../_lib/sound";
+import DiceIcon from "./DiceIcon";
 import DoodlePad, { DoodleView } from "./DoodlePad";
 import SectionHead from "./SectionHead";
 import Select from "./Select";
@@ -23,17 +23,15 @@ const dateFmt = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short
 export default function VisitorLog({ ui, lang, notes, sample }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [openCount, setOpenCount] = useState(0); // remounts the dialog form each time it opens
-  const { play } = useSound();
 
   function openDialog() {
     setOpenCount((n) => n + 1);
     dialogRef.current?.showModal();
-    play("paper");
   }
 
   return (
-    <section className={sec.section} id="notes">
-      <SectionHead index="04" label={ui.label} title={ui.title} intro={ui.intro} aside={sample ? <span className={s.sample}>{ui.sampleBadge}</span> : undefined} />
+    <section className={`${sec.section} ${sec.cream}`} id="notes">
+      <SectionHead title={ui.title} intro={ui.intro} />
 
       <div className={s.wall}>
         {notes.map((note, i) => (
@@ -69,7 +67,6 @@ export default function VisitorLog({ ui, lang, notes, sample }: Props) {
 
 function NoteForm({ ui, lang, onClose }: { ui: UI["notes"]; lang: Lang; onClose: () => void }) {
   const m = ui.modal;
-  const { play } = useSound();
   const [tab, setTab] = useState<"write" | "draw">("write");
   const [name, setName] = useState("");
   const [role, setRole] = useState<NoteRole>("visitor");
@@ -104,7 +101,6 @@ function NoteForm({ ui, lang, onClose }: { ui: UI["notes"]; lang: Lang; onClose:
       });
       if (res.ok) {
         setSent(true);
-        play("stamp");
       } else {
         setError(res.error);
         turnstile.current?.reset();
@@ -176,10 +172,9 @@ function NoteForm({ ui, lang, onClose }: { ui: UI["notes"]; lang: Lang; onClose:
                 className={s.linkBtn}
                 onClick={() => {
                   setStamp((p) => ({ ...p, seed: randomSeed(), shape: STAMP_SHAPES[Math.floor(Math.random() * STAMP_SHAPES.length)] }));
-                  play("tick");
                 }}
               >
-                ↻ {m.shuffle}
+                <DiceIcon className={s.diceIcon} /> {m.shuffle}
               </button>
             </div>
           </div>

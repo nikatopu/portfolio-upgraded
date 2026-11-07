@@ -60,7 +60,9 @@ notes {
 
 Flow: Server Action → Turnstile → rate limit → Zod → insert `pending` → email you → your click sets `approved` → `revalidateTag('notes')`. The wall itself is a cached static list.
 
-## 3. UI sounds
+## 3. UI sounds (removed 2026-11-07, your call)
+
+_Everything below is historical; the sound module and toggle no longer exist._
 
 - **Prototype:** `src/app/prototype/lib/sound.tsx`, the only file involved.
 - Synthesized with Web Audio, so there are no audio files:

@@ -58,7 +58,7 @@ export default async function Home({ params }: Props) {
         <Hero ui={ui.hero} lang={lang} />
 
         <section className={sec.section} id="work">
-          <SectionHead index="01" label={ui.work.label} title={ui.work.title} intro={ui.work.intro} aside={<span>{cases.length} {ui.work.files}</span>} />
+          <SectionHead title={ui.work.title} intro={ui.work.intro} />
           <FolderStack
             cases={cases.map(({ slug, number, title, headline, summary, tabLabel, client, years, kind, image, stack }) => ({ slug, number, title, headline, summary, tabLabel, client, years, kind, image, stack }))}
             ui={ui.work}

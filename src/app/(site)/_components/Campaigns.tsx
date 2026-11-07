@@ -7,8 +7,8 @@ type Props = { ui: UI["campaigns"]; building: UI["building"] };
 
 export default function Campaigns({ ui, building }: Props) {
   return (
-    <section className={sec.section} id="campaigns">
-      <SectionHead index="02" label={ui.label} title={ui.title} intro={ui.intro} />
+    <section className={`${sec.section} ${sec.cream}`} id="campaigns">
+      <SectionHead title={ui.title} intro={ui.intro} />
 
       <ol className={s.ledger}>
         {ui.items.map((item, i) => (

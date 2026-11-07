@@ -4,7 +4,6 @@ import { Courier_Prime, Gloock, Hanken_Grotesk, Noto_Sans_Georgian, Noto_Serif_G
 import { notFound } from "next/navigation";
 import { getSite, getUI, LANGS, toLang } from "@/lib/content";
 import { ogLocale, robotsFor, SITE_URL } from "@/lib/seo";
-import { SoundProvider } from "../_lib/sound";
 import RevealObserver from "../_components/RevealObserver";
 import s from "../Site.module.scss";
 
@@ -62,7 +61,7 @@ export default async function SiteLayout({ children, params }: Params & { childr
       <body className={`${fonts} ${s.root}`}>
         <script dangerouslySetInnerHTML={{ __html: bootScript }} />
         <div className={s.progress} aria-hidden />
-        <SoundProvider>{children}</SoundProvider>
+        {children}
         <RevealObserver />
       </body>
     </html>

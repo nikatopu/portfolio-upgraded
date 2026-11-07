@@ -99,6 +99,7 @@ These change what we build. Each file has more detailed questions.
 | 2026-11-04 | **Phase 2 started:** the prototype became the real site; folders redesigned; every hover has a transition | See [07](07-roadmap.md) |
 | 2026-11-04 | Folder opening animation: the flap now swings toward the viewer | Your note: it looked like it was closing |
 | 2026-11-04 | **Phase 3 built:** Neon + Drizzle, Turnstile, Resend, `/admin`, anonymous tap counts; no Upstash | Go-live steps in [08](08-going-live.md) |
+| 2026-11-07 | **Sound removed entirely**; section labels removed; alternating paper/cream section bands; folders without vertical lines; sticky folder animation on phones; stamp on the phone hero; contact methods 2×2 on phones; dice "randomize" button (Lucide, ISC) | Your notes after launch |
 | 2026-11-07 | Resend removed (submissions go to the DB → /admin); tagline "Helping brands turn visitors into clients"; Instagram/Facebook/LinkedIn/YouTube; 2 hero buttons; Lab opens in new tabs | Your notes |
 | 2026-11-07 | Launch prep: Lighthouse 95/100/100/100, /ka hidden until translated, robots + security headers, privacy notes | Checklist in [08](08-going-live.md) |
 | 2026-11-07 | **Glitch campaigns re-selected** from the full archive: 8 on the homepage + 22 in a collapsible "all campaigns" list (30 total, after your removals) | Rule in [02](02-projects.md) |
