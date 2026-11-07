@@ -1,0 +1,60 @@
+.footer {
+  max-width: var(--max);
+  margin: clamp(96px, 14vw, 180px) auto 0;
+  padding: 0 var(--gutter) 40px;
+}
+
+.big {
+  padding: 28px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  font: var(--display-weight) clamp(1.9rem, 6.2vw, 5.4rem) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+  letter-spacing: calc(-0.02em + var(--tracking-offset));
+  overflow-wrap: anywhere;
+
+  a {
+    text-decoration: none;
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat;
+    transition: background-size 0.5s var(--ease), color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+      background-size: 100% 2px;
+    }
+  }
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+
+  a {
+    display: inline-block;
+    padding: 6px 0; // 24px+ touch targets
+    text-decoration: none;
+    color: var(--ink);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.version,
+.proto {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}

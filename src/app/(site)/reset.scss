@@ -1,0 +1,29 @@
+/* Minimal reset for the site's root layout (it doesn't load the legacy global.scss). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img,
+svg,
+canvas {
+  max-width: 100%;
+}

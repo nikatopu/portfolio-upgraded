@@ -1,0 +1,40 @@
+:root {
+  --body-font: var(--font-legacy), system-ui, sans-serif;
+
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+
+  --color-background: #121212;
+  --color-background-secondary: #161616;
+
+  --color-primary: #1345b3;
+  --color-accent: #1981ea;
+  --color-secondary: #1e1e1e;
+
+  --header-height: 4em;
+  --content-min-height: calc(100svh - var(--header-height));
+}
+
+body {
+  position: relative;
+
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  @media (min-width: 1400px) {
+    font-size: 1.2vw;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 0.8em;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}

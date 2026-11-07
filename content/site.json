@@ -1,0 +1,26 @@
+{
+  "name": "Nikoloz Topuridze",
+  "shortName": "Nika Topuridze",
+  "url": "https://nikatopu.dev",
+  "city": "Tbilisi",
+  "timezone": "Asia/Tbilisi",
+  "version": "v.2026",
+  "resume": "/documents/Nikoloz Topuridze - Resume.pdf",
+  "contact": {
+    "email": "contact@nikatopu.dev",
+    "phoneE164": "+995595070861",
+    "phoneDisplay": "+995 595 07 08 61",
+    "whatsapp": "995595070861",
+    "viber": "+995595070861",
+    "telegram": "+995595070861"
+  },
+  "socials": {
+    "instagram": "https://www.instagram.com/codestopu/",
+    "linkedin": "https://www.linkedin.com/in/nikoloz-topuridze-258676270/",
+    "facebook": "https://www.facebook.com/profile.php?id=61573391712886",
+    "youtube": "https://www.youtube.com/@topucodes"
+  },
+  "profiles": {
+    "github": "https://github.com/nikatopu"
+  }
+}

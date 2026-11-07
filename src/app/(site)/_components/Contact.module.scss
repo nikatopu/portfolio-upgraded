@@ -1,0 +1,171 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: clamp(20px, 4vw, 36px);
+  background: var(--folder);
+  border: 1px solid var(--folder-edge);
+  border-radius: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+
+  > span,
+  > label > span,
+  legend {
+    font: 500 0.72rem/1 var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  input,
+  textarea {
+    font: 400 1rem var(--font-body);
+    padding: 12px 14px;
+    border: 1px solid var(--folder-edge);
+    border-radius: 8px;
+    background: var(--paper-raised);
+    color: var(--ink);
+    resize: vertical;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  button {
+    padding: 8px 14px;
+    border: 1px solid var(--folder-edge);
+    border-radius: 999px;
+    background: var(--paper-raised);
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &[aria-pressed="true"] {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+  }
+}
+
+.submit {
+  align-self: flex-start;
+  padding: 14px 26px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font: 500 1rem var(--font-body);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+
+.sent {
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--paper-raised);
+}
+
+.direct {
+  border-top: 1px solid var(--ink);
+}
+
+.directTitle {
+  padding: 16px 0;
+  font: 500 0.72rem/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.method {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: baseline;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  transition: padding-left 0.3s var(--ease), color 0.2s ease;
+
+  &:hover {
+    padding-left: 8px;
+    color: var(--accent);
+  }
+}
+
+.methodName {
+  font: var(--display-weight) 1.7rem/1 var(--font-display);
+  font-stretch: var(--display-stretch);
+}
+
+.methodHint {
+  font: 400 0.78rem var(--font-mono);
+  color: var(--muted);
+}
+
+.error {
+  padding: 12px 14px;
+  border-left: 3px solid #b42318;
+  background: var(--paper-raised);
+  font-size: 0.92rem;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+// Off-screen rather than display:none, so naive bots still "see" and fill it.
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.privacy {
+  margin: -6px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}

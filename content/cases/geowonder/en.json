@@ -1,0 +1,106 @@
+{
+  "title": "GeoWonder",
+  "headline": "A tour company site built to turn visitors into WhatsApp messages",
+  "summary": "A website and admin for a private-tour operator in Georgia, followed by a full SEO audit and overhaul aimed at one thing: more travellers getting in touch.",
+  "tabLabel": "Tourism · Lead generation",
+  "role": "Freelance developer: build, SEO audit, ongoing revisions",
+  "timeline": [
+    {
+      "period": "Jun – Sep 2025",
+      "text": "Designed and built the website and admin panel."
+    },
+    {
+      "period": "2025 – 2026",
+      "text": "Paid revisions, including a full SEO audit and overhaul in October 2026."
+    }
+  ],
+  "tldr": [
+    "GeoWonder runs private, fully customisable tours across Georgia with local guides. There's no office, and almost every booking starts as a WhatsApp message.",
+    "I built the site and an admin where the owner manages tours, articles and photos. A year later I audited it for search and fixed what was keeping it invisible.",
+    "The overhaul made the hero video roughly 3× lighter, let search engines see every tour, and made every WhatsApp and phone tap measurable."
+  ],
+  "metrics": [
+    {
+      "value": "17 → 5.3 MB",
+      "label": "hero video on desktop (poster image: 719 KB → 116 KB)"
+    },
+    {
+      "value": "6 → 19",
+      "label": "tours that search engines could reach from the tours page"
+    },
+    {
+      "value": "0 → 3",
+      "label": "kinds of lead tracked: WhatsApp taps, phone taps, form submissions"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "The client",
+      "paragraphs": [
+        "GeoWonder is a small tour operator. The guides speak Georgian, English and Russian, every trip is private and adjustable, and every price is quoted individually. That shaped everything: the site's job isn't to sell a package, it's to make a traveller trust the guides enough to send a message."
+      ],
+      "bullets": []
+    },
+    {
+      "heading": "2025: the build",
+      "paragraphs": [
+        "I built the site with an admin panel so the owner can run it without me: create and reorder tours by drag and drop, write travel articles in a familiar text editor, manage the photo gallery, and update contact details. Contact is WhatsApp-first, because that's how tourists in Georgia actually reach guides."
+      ],
+      "bullets": []
+    },
+    {
+      "heading": "2026: why nobody could find it",
+      "paragraphs": [
+        "A year in, the site looked good but barely appeared in search. I ran a full audit against the live site and found the problems weren't one big mistake but many small ones:"
+      ],
+      "bullets": [
+        "Tour pages had only 37–62 words of unique text each. The rest was the same FAQ repeated on every tour.",
+        "The tours list only showed search engines 6 of the 19 tours. The rest loaded with JavaScript after the page arrived.",
+        "The main headline started invisible and faded in, which delayed the moment Google considers the page \"loaded\".",
+        "The hero video weighed 17 MB, link previews on most pages showed the homepage's title, and the phone link was missing the country code's \"+\", so it could fail from a foreign SIM.",
+        "Not a single WhatsApp or phone tap was being measured, so there was no way to tell whether anything worked.",
+        "While auditing, I also found and closed a security gap in the admin's data routes."
+      ]
+    },
+    {
+      "heading": "What I changed",
+      "paragraphs": [
+        "I worked through the fixes in order of how much each one would lead to more messages, and agreed the business rules with the owner first: no prices on the site, every tour described as customisable, three guide languages everywhere."
+      ],
+      "bullets": [
+        "Correct titles, descriptions, link previews and canonical addresses on every page, from one shared system so they can't drift again.",
+        "A sitemap that updates itself (including images), instant notification to search engines when content changes, and permanent redirects when a tour is renamed.",
+        "Every tour and article reachable in plain HTML, plus structured data describing the business, each tour, each article and the breadcrumbs.",
+        "Dedicated landing pages for what travellers actually search, such as \"private tour guide Tbilisi\", instead of internal names like \"Kakheti 2\".",
+        "Generated preview images for every tour, so shared links look like the tour, not the logo.",
+        "Lighter media, and the headline visible from the first frame.",
+        "Tracking for WhatsApp taps, phone taps and form submissions, so the owner can see which pages bring enquiries."
+      ]
+    },
+    {
+      "heading": "Results so far",
+      "paragraphs": [
+        "The overhaul went live at the end of October 2026. Search rankings take weeks to months to respond, so I'm not going to claim a traffic jump yet. What changed immediately is measurable above: lighter pages, every tour visible to search engines, and lead tracking in place. I'll update this case study with Search Console and enquiry numbers in early 2027."
+      ],
+      "bullets": []
+    }
+  ],
+  "underTheHood": {
+    "heading": "Under the hood",
+    "paragraphs": [
+      "Next.js 15 App Router, Prisma with PostgreSQL, Vercel Blob for media, and TinyMCE in the admin. The SEO work is one shared metadata builder used by every route, so canonical and preview tags can't go out of sync page by page."
+    ],
+    "bullets": [
+      "On-demand revalidation plus IndexNow pings when the owner publishes, so new tours reach search engines in minutes instead of whenever the cache expires.",
+      "Old addresses are kept per tour, so renaming a tour issues a permanent redirect instead of a 404.",
+      "Per-tour Open Graph images rendered on the server.",
+      "JSON-LD for TravelAgency, TouristTrip, BlogPosting, Service and BreadcrumbList, plus an llms.txt summary for AI assistants.",
+      "The write API routes required no authentication. I moved them behind the admin session in middleware."
+    ]
+  },
+  "cta": "Is your business hard to find on Google? Let's look at why.",
+  "seo": {
+    "title": "GeoWonder: website, admin and SEO overhaul for a Georgian tour operator",
+    "description": "How I built GeoWonder's tour website and admin, then audited and fixed its SEO: thin pages, hidden tours, heavy media and untracked leads."
+  }
+}

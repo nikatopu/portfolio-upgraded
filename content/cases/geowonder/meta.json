@@ -1,0 +1,10 @@
+{
+  "slug": "geowonder",
+  "order": 2,
+  "kind": "client",
+  "client": "GeoWonder",
+  "years": "2025–2026",
+  "stack": ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Vercel Blob", "TinyMCE", "GA4"],
+  "links": { "live": "https://www.geowonder.tours" },
+  "image": "/assets/projects/geowonder.jpg"
+}

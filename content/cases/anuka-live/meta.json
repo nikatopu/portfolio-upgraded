@@ -1,0 +1,10 @@
+{
+  "slug": "anuka-live",
+  "order": 3,
+  "kind": "client",
+  "client": "Anuka Kipshidze",
+  "years": "2025–2026",
+  "stack": ["React", "Express (serverless)", "Prisma", "PostgreSQL", "Cloudinary", "SCSS", "Vercel"],
+  "links": { "live": "https://anuka.live" },
+  "image": "/assets/projects/anukalive.jpg"
+}

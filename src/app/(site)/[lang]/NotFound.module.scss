@@ -1,0 +1,38 @@
+.wrap {
+  max-width: 720px;
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 18vh var(--gutter) 0;
+}
+
+.code {
+  font: 400 0.8rem/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.title {
+  margin-top: 18px;
+  font: var(--display-weight) clamp(2.6rem, 7vw, 4.6rem) / 1 var(--font-display);
+}
+
+.text {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 32px;
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease), color 0.2s ease;
+
+  &:hover {
+    transform: translateX(-4px);
+    color: var(--ink);
+  }
+}

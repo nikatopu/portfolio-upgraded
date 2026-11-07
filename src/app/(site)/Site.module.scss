@@ -1,0 +1,151 @@
+// "Case File": archival / editorial. Light first, one accent.
+
+.root {
+  --paper: #f3f0ea;
+  --paper-raised: #fbfaf6;
+  --folder: #e7ddc8;
+  --folder-edge: #d3c5a8;
+  --ink: #151515;
+  --muted: #6e6a62;
+  --rule: #d8d3c8;
+  --accent: #1f4fd1;
+  --accent-ink: #ffffff;
+  --shadow: 0 1px 0 rgba(60, 45, 20, 0.06), 0 12px 32px -12px rgba(60, 45, 20, 0.18);
+  --grain-opacity: 0.05;
+
+  // --- type: "Archive" ---
+  // Gloock display · Hanken Grotesk text · Courier Prime typewriter labels.
+  // Georgian falls back to Noto Serif/Sans Georgian automatically.
+  --font-display: var(--f-gloock), var(--font-serif-ka), Georgia, serif;
+  --font-body: var(--f-hanken), var(--font-sans-ka), system-ui, sans-serif;
+  --font-mono: var(--f-courier), var(--font-sans-ka), ui-monospace, monospace;
+  --font-accent: var(--font-body); // italic sub-headlines and notes
+  --accent-style: italic;
+  --accent-weight: 400;
+  --display-weight: 400;
+  --display-stretch: 100%;
+  --title-case: none;
+  --title-italic: normal;
+  --tracking-offset: 0em;
+
+  --header-h: 64px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --max: 1240px;
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+
+  position: relative;
+  min-height: 100vh;
+  font-size: 1rem; // reset the old site's body font-size rules
+  font-family: var(--font-body);
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  // paper grain
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--grain-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+:global(html[data-theme="dark"]) .root {
+  --paper: #121211;
+  --paper-raised: #1a1a18;
+  --folder: #24211c;
+  --folder-edge: #3a342b;
+  --ink: #eae7e0;
+  --muted: #9a958b;
+  --rule: #2e2c28;
+  --accent: #7c9bff;
+  --accent-ink: #0d0e14;
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -16px rgba(0, 0, 0, 0.7);
+  --grain-opacity: 0.035;
+}
+
+// Baseline: every interactive element eases its color/background/border changes.
+// Zero specificity (:where), so any component that sets its own `transition` wins,
+// and must list every property it changes on hover.
+:where(.root) :where(a, button, select, input, textarea, summary) {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+// reading progress (CSS scroll-driven; ignored where unsupported)
+.progress {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 60 !important;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+
+  @supports (animation-timeline: scroll()) {
+    animation: grow linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+// --- scroll reveal (content is visible without JS; only hidden once JS is confirmed) ---
+// Uses an animation, not `transition`: a transition here would override every revealed element's
+// own hover transitions (it has higher specificity), making hovers snap instead of ease.
+:global(html.js) .root [data-reveal]:not([data-revealed]) {
+  opacity: 0;
+}
+
+.root [data-revealed] {
+  animation: reveal 0.7s var(--ease);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root [data-revealed] {
+    animation-name: fade;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}

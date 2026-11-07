@@ -1,0 +1,110 @@
+{
+  "title": "Dialogue Forge",
+  "headline": "A free dialogue editor for game developers who just want to start writing",
+  "summary": "A browser-based visual editor for branching game dialogue, built because the existing tools were paid, limited, desktop-bound, tied to one engine, or text-only.",
+  "tabLabel": "Product · Game dev tool",
+  "role": "Solo founder: product, design, engineering, launch",
+  "timeline": [
+    {
+      "period": "Mar 2026",
+      "text": "Wrote branching dialogue by hand in code for a small game, and decided it should be visual."
+    },
+    {
+      "period": "May 2026",
+      "text": "v1.0 launched: node editor, live preview and JSON export, all in the browser."
+    },
+    {
+      "period": "May – Oct 2026",
+      "text": "13 releases: cloud saves, mobile editing, variables and conditions, validation, themes, a public roadmap."
+    }
+  ],
+  "tldr": [
+    "Branching dialogue is the backbone of story-driven games, but the tools for writing it were either paid or limited, desktop-only, tied to one engine, or text-only.",
+    "I built Dialogue Forge: open a browser tab and start drawing conversations. No install, no account, free for commercial use, and it exports one clean JSON file any engine can read.",
+    "With almost no marketing it has reached 50 active users in 90 days, and half of the people who created an account use it every week."
+  ],
+  "metrics": [
+    {
+      "value": "13",
+      "label": "releases in the first 5 months (v1.0 → v1.4.4)"
+    },
+    {
+      "value": "50",
+      "label": "active users in the last 90 days, from 3 social posts and 1 itch.io page"
+    },
+    {
+      "value": "10 / 20",
+      "label": "registered users active every week"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Why I built it",
+      "paragraphs": [
+        "In early 2026 I was building a small dialogue-driven game and writing the conversation tree directly in TypeScript: nodes, answers and \"next\" pointers, nearly 200 lines for a short scene. Every change meant reading code to picture a graph. The obvious fix was to draw the graph instead.",
+        "So I looked at what game developers actually use, and found a real but narrow gap."
+      ],
+      "bullets": [
+        "The most powerful tools are desktop applications with a steep learning curve.",
+        "Some web-based editors have free tiers that forbid commercial use, or cap how many nodes or projects you can make.",
+        "Popular open-source options are text-first scripting languages. They're great for writers comfortable with syntax, but they aren't a visual graph.",
+        "Others live inside a single engine as a plugin, so the dialogue is locked to Unity or Godot."
+      ]
+    },
+    {
+      "heading": "The bet",
+      "paragraphs": [
+        "Nobody was offering the shortest path from idea to playable branching dialogue to engine-ready data with zero setup. That became the product: a visual node graph in the browser, no account needed, no limits on local work, free for commercial use, and a playtest button that shows how the conversation feels before it goes anywhere near an engine."
+      ],
+      "bullets": []
+    },
+    {
+      "heading": "What shipped",
+      "paragraphs": [
+        "Version 1.0 went live in May 2026, and I kept shipping small releases based on what people did, not on a big upfront plan:"
+      ],
+      "bullets": [
+        "Character, action and start nodes, with several entry points per file, so one file can hold a whole NPC.",
+        "Preview mode: click through the conversation as the player would.",
+        "Variables and conditions (AND/OR groups, set/add/toggle), with {variable} text inside lines. Choices that are locked show why.",
+        "A validator that catches dead ends, cycles and type mismatches before export.",
+        "One-click auto-layout for messy graphs, templates, light and dark themes, and touch editing on phones and tablets.",
+        "Optional Google or GitHub sign-in for cloud autosave across devices (up to 5 cloud projects for free).",
+        "A public roadmap and changelog inside the app."
+      ]
+    },
+    {
+      "heading": "Early traction",
+      "paragraphs": [
+        "Marketing so far: three social posts and one itch.io page. That brought 50 active users over 90 days and 20 registered accounts, and 10 of those 20 come back every week. The numbers are small, but a 50% weekly return rate for a free tool nobody has promoted is the signal that matters: the people who find it keep using it.",
+        "The analytics are designed to answer product questions without tracking people. I only measure a handful of funnel steps (opened editor, created node, previewed, exported) and which engine people plan to export to, which tells me where to put effort next."
+      ],
+      "bullets": []
+    },
+    {
+      "heading": "Where it's honestly behind",
+      "paragraphs": [
+        "Established tools have years of shipped games behind them, real-time collaboration, localisation and maintained engine plugins. Dialogue Forge has a JSON format and a sample runner. The roadmap goes there next: a narrative database, then collaboration, then official runtimes for the major engines."
+      ],
+      "bullets": []
+    }
+  ],
+  "underTheHood": {
+    "heading": "Under the hood",
+    "paragraphs": [
+      "Next.js 16 and React Flow for the canvas, Zustand stores for editor state, Supabase for auth and cloud projects, PostHog for analytics, and Resend for email. All of it was designed, built and shipped solo."
+    ],
+    "bullets": [
+      "Saves that never break: on load, every project is backed up, upgraded through a chain of small version migrations (seven so far, from the first 1.0 files onward), repaired and validated. Files from launch day still open after six schema changes.",
+      "The free-tier limit lives in the database: a Postgres trigger enforces the 5-cloud-project cap, and only runs when a project moves to the cloud, so ordinary autosaves stay cheap.",
+      "Typed, privacy-first analytics: the funnel events are a closed TypeScript type, properties are scrubbed so dialogue text can never leak, nothing is stored in cookies, and Do Not Track or Global Privacy Control turns analytics off completely.",
+      "An in-editor simulator evaluates nested conditions and variable operations, so writers can test game logic without the game.",
+      "A hand-written layered auto-layout (no layout library) and a validator with around 20 issue types."
+    ]
+  },
+  "cta": "Have a product idea that needs a fast, careful first version?",
+  "seo": {
+    "title": "Dialogue Forge: building a free visual dialogue editor for game developers",
+    "description": "Why I built Dialogue Forge, a free browser-based branching dialogue editor for game devs: the gap in existing tools, what shipped in 13 releases, early traction and the engineering behind it."
+  }
+}

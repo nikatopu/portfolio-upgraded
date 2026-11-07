@@ -1,0 +1,396 @@
+.sample {
+  color: var(--accent);
+}
+
+.wall {
+  columns: 3 280px;
+  column-gap: 24px;
+}
+
+.card,
+.addCard {
+  break-inside: avoid;
+  margin-bottom: 24px;
+}
+
+.card {
+  position: relative;
+  padding: 18px 20px 22px;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+  rotate: var(--tilt);
+  transition: rotate 0.45s var(--ease), translate 0.45s var(--ease), box-shadow 0.45s ease;
+  // index card: ruled lines + a margin rule
+  background-image: linear-gradient(to bottom, transparent 54px, color-mix(in srgb, var(--accent) 35%, transparent) 54px 55px, transparent 55px),
+    repeating-linear-gradient(to bottom, transparent 0 25px, color-mix(in srgb, var(--rule) 80%, transparent) 25px 26px);
+  background-position: 0 0, 0 55px;
+
+  &:hover {
+    rotate: 0deg;
+    translate: 0 -4px;
+    box-shadow: 0 2px 0 rgba(60, 45, 20, 0.05), 0 18px 36px -14px rgba(60, 45, 20, 0.28);
+  }
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 46px;
+}
+
+.cardName {
+  font: var(--display-weight) 1.35rem/1.1 var(--font-display);
+  font-stretch: var(--display-stretch);
+}
+
+.cardRole {
+  font: 500 0.7rem/1.5 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cardStamp {
+  flex: none;
+  margin: -8px -8px 0 0;
+}
+
+.cardMsg {
+  margin-top: 14px;
+  font: var(--accent-style) var(--accent-weight) 1.2rem/26px var(--font-accent);
+}
+
+.cardDoodle {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  color: var(--ink);
+}
+
+.addCard {
+  width: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1.5px dashed var(--muted);
+  border-radius: 6px;
+  background: none;
+  color: var(--ink);
+  font: 500 1rem var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.plus {
+  font: var(--display-weight) 2.4rem/1 var(--font-display);
+  font-stretch: var(--display-stretch);
+}
+
+// --- dialog ---------------------------------------------------------------
+
+.dialog {
+  margin: auto; // the old global.scss resets * { margin: 0 }, which un-centers <dialog>
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.45);
+
+  &::backdrop {
+    background: rgba(20, 16, 10, 0.45);
+    backdrop-filter: blur(3px);
+  }
+
+  &[open] {
+    animation: dialogIn 0.35s var(--ease);
+  }
+}
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) rotate(-1deg);
+  }
+}
+
+.dialogInner {
+  padding: 24px clamp(18px, 4vw, 32px) 28px;
+}
+
+.dialogHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+
+  h3 {
+    font: var(--display-weight) 2rem/1 var(--font-display);
+    font-stretch: var(--display-stretch);
+  }
+}
+
+.close {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: none;
+  color: var(--ink);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  > span,
+  > label > span,
+  legend {
+    display: flex;
+    justify-content: space-between;
+    font: 500 0.72rem/1 var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  input,
+  textarea {
+    font: 400 1rem var(--font-body);
+    padding: 11px 13px;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink);
+    resize: vertical;
+  }
+}
+
+.fieldLabel {
+  font: 500 0.72rem/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  button {
+    padding: 7px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+
+    &[aria-pressed="true"] {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  align-self: flex-start;
+
+  button {
+    padding: 7px 16px;
+    border: none;
+    border-radius: 999px;
+    background: none;
+    color: var(--muted);
+    font: 500 0.88rem var(--font-body);
+    cursor: pointer;
+
+    &[aria-selected="true"] {
+      background: var(--paper-raised);
+      color: var(--ink);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.doodle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.doodleCanvas {
+  width: 100%;
+  aspect-ratio: 1000 / 625;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--paper);
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.doodleBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--muted);
+
+  span {
+    margin-right: auto;
+  }
+
+  button {
+    padding: 5px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: none;
+    color: var(--ink);
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+}
+
+.stampRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.linkBtn {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  font: 500 0.9rem var(--font-body);
+  cursor: pointer;
+}
+
+.notice {
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.submit {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 500 1rem var(--font-body);
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 8px 0 4px;
+
+  h4 {
+    font: var(--display-weight) 2rem/1.1 var(--font-display);
+    font-stretch: var(--display-stretch);
+  }
+}
+
+.successStamp {
+  animation: stampDown 0.5s cubic-bezier(0.3, 1.5, 0.5, 1) both;
+}
+
+@keyframes stampDown {
+  from {
+    opacity: 0;
+    transform: scale(1.5) rotate(-10deg);
+  }
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.emptyHint {
+  max-width: 22em;
+  padding: 0 16px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.error {
+  padding: 12px 14px;
+  border-left: 3px solid #b42318;
+  background: color-mix(in srgb, #b42318 7%, transparent);
+  font-size: 0.9rem;
+}
+
+// Off-screen rather than display:none, so naive bots still "see" and fill it.
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.privacy {
+  margin: -6px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}

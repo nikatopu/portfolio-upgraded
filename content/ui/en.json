@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "homeTitle": "Nikoloz Topuridze: freelance web developer in Tbilisi, Georgia",
+    "homeDescription": "Helping brands turn visitors into clients: websites and web apps for businesses in Georgia and abroad that are fast, easy to find on Google, and easy to run yourself."
+  },
+  "nav": {
+    "work": "Work",
+    "lab": "Lab",
+    "notes": "Visitor log",
+    "contact": "Get a quote",
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode",
+    "soundOn": "Turn UI sounds on",
+    "soundOff": "Turn UI sounds off",
+    "otherLanguage": "ქართ",
+    "otherLanguageLabel": "ქართულად"
+  },
+  "hero": {
+    "eyebrow": "Full-stack developer · Tbilisi, Georgia",
+    "title": "Nikoloz Topuridze",
+    "lede": "Helping brands turn visitors into clients.",
+    "credibility": "By day I build interactive campaigns for Universal Music artists at Glitch. I also take on a small number of freelance projects.",
+    "ctaPrimary": "Get a quote",
+    "ctaSecondary": "See the case files",
+    "stampText": "NIKOLOZ TOPURIDZE · TBILISI · CASE FILES ·"
+  },
+  "work": {
+    "label": "Case files",
+    "title": "Selected work",
+    "intro": "Each folder is one client or product: what they needed, what I built and what changed.",
+    "open": "Open case",
+    "caseLabel": "Case",
+    "client": "Client work",
+    "product": "Own product",
+    "files": "files"
+  },
+  "campaigns": {
+    "label": "Day job",
+    "title": "Interactive campaigns for global artists",
+    "intro": "At Glitch I build the games, quizzes and fan hubs that record labels launch releases with. Some I've worked on:",
+    "items": [
+      {
+        "artist": "Metallica",
+        "format": "ReLoad Heardle: a daily game where fans guess the track from short audio snippets, with stats and a countdown to tomorrow's song",
+        "url": "https://play.umusic.com/metallica-reload"
+      },
+      {
+        "artist": "KPop Demon Hunters",
+        "format": "A \"which hunter are you?\" quiz with a streaming connect and a shareable result",
+        "url": "https://play.umusic.com/kpopdemonhunters"
+      },
+      {
+        "artist": "Imagine Dragons",
+        "format": "Bones: fans upload a photo and get it back as a shareable, album-styled image",
+        "url": "https://play.umusic.com/bones"
+      },
+      {
+        "artist": "Karol G",
+        "format": "#Karolchella: a bilingual hub with a 3D globe, a setlist creator to save and share, and a fan gallery",
+        "url": "https://archive25.glitch.ge/karolg/hub"
+      },
+      {
+        "artist": "Mariah Carey",
+        "format": "The Emancipation of Mimi anniversary hub: countdown, fan vote, exclusive remix and pre-save",
+        "url": "https://archive25.glitch.ge/mariahcarey/emancipation"
+      },
+      {
+        "artist": "Stray Kids",
+        "format": "DO IT: a level-based browser game with a leaderboard and streaming connect",
+        "url": "https://archive25.glitch.ge/straykids/finder"
+      },
+      {
+        "artist": "Cigarettes After Sex",
+        "format": "A virtual pet to look after, which unlocks a secret video",
+        "url": "https://archive25.glitch.ge/cigarettessunset/tamagotchi"
+      },
+      {
+        "artist": "Pop Girl Summer",
+        "format": "A season-long fan hub: sign-in, points and leaderboard, polls, quizzes, events and a social feed",
+        "url": "https://play.umusic.com/popgirlsummer"
+      }
+    ],
+    "more": "See Glitch's work",
+    "archive": [
+      {
+        "artist": "Verve Records",
+        "format": "Interactive timeline",
+        "year": "2026",
+        "url": "https://archive25.glitch.ge/verve/timeline"
+      },
+      {
+        "artist": "TOMORA",
+        "format": "Boarding-pass generator",
+        "year": "2026",
+        "url": "https://play.umusic.com/tomora"
+      },
+      {
+        "artist": "ILLENIUM",
+        "format": "Interactive lyric book",
+        "year": "2026",
+        "url": "https://play.umusic.com/illeniumlyricbook"
+      },
+      {
+        "artist": "Au/Ra",
+        "format": "Top-down RPG game",
+        "year": "2026",
+        "url": "https://archive25.glitch.ge/aura/topdown"
+      },
+      {
+        "artist": "Conan Gray",
+        "format": "Cover art creator",
+        "year": "2026",
+        "url": "https://archive25.glitch.ge/conangray/covercreator"
+      },
+      {
+        "artist": "Joji",
+        "format": "Interactive map",
+        "year": "2026",
+        "url": "https://archive25.glitch.ge/joji/map-HMLV51wan1"
+      },
+      {
+        "artist": "Jazz Dispensary",
+        "format": "Personality quiz",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/jazzdispensary/quiz"
+      },
+      {
+        "artist": "Cynthia Erivo",
+        "format": "Interactive album journal",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/cynthiaerivo/journal"
+      },
+      {
+        "artist": "Teyana Taylor",
+        "format": "Escape-room puzzle hub",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/teyanataylor/hub"
+      },
+      {
+        "artist": "NBA YoungBoy",
+        "format": "Playlist creator",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/nbayoungboy/playlistcreator"
+      },
+      {
+        "artist": "Holly Humberstone",
+        "format": "Fan timeline / submissions",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/hollyhumberstone/timeline"
+      },
+      {
+        "artist": "The Tragically Hip",
+        "format": "Personality quiz",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/thetragicallyhip/quiz"
+      },
+      {
+        "artist": "Nelly",
+        "format": "Playlist generator + vinyl",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/nelly/playlistgenerator"
+      },
+      {
+        "artist": "BENEE",
+        "format": "Personality quiz",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/benee/quiz"
+      },
+      {
+        "artist": "Morgan Wallen",
+        "format": "Interactive 3D scene",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/morganwallen/hotspots"
+      },
+      {
+        "artist": "JID",
+        "format": "Text/image generator",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/jid/textcreator"
+      },
+      {
+        "artist": "Ice Nine Kills",
+        "format": "Password-gated ARG map",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/iceninekills/map"
+      },
+      {
+        "artist": "Freddie Gibbs",
+        "format": "Fighting game",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/freddiegibbs/fighter"
+      },
+      {
+        "artist": "Ela Taubert",
+        "format": "Album reveal",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/elataubert/reveal"
+      },
+      {
+        "artist": "UMG Fansational",
+        "format": "Fan pass / reward claim",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/fansational/summer2025"
+      },
+      {
+        "artist": "Maddie & Tae",
+        "format": "Personality quiz",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/maddieandtae/quiz"
+      },
+      {
+        "artist": "Machine Gun Kelly",
+        "format": "Jukebox",
+        "year": "2025",
+        "url": "https://archive25.glitch.ge/machinegunkelly/jukebox"
+      }
+    ],
+    "allLabel": "All campaigns I've worked on",
+    "allNote": "Older campaigns live on Glitch's archive, and some have finished their run."
+  },
+  "building": {
+    "label": "Also building",
+    "title": "Raid of the Leks",
+    "text": "A tower-defense game set in 18th-century Georgia, built with Phaser. Currently in alpha.",
+    "link": "Play the alpha"
+  },
+  "lab": {
+    "label": "Lab",
+    "title": "Make a stamp",
+    "intro": "Every note in the visitor log gets a generative stamp. The same seed always draws the same stamp, on any device.",
+    "seed": "Seed",
+    "density": "Density",
+    "flow": "Flow",
+    "shape": "Shape",
+    "shapeCircle": "Circle",
+    "shapeSquare": "Square",
+    "shapeHex": "Hexagon",
+    "shuffle": "Shuffle",
+    "download": "Download PNG",
+    "moreTitle": "More experiments",
+    "more": [
+      {
+        "title": "Mathematical animations",
+        "text": "Particles moved by formulas you type."
+      },
+      {
+        "title": "Guess the ball",
+        "text": "A spot-the-ball game prototype."
+      }
+    ]
+  },
+  "notes": {
+    "label": "Visitor log",
+    "title": "Leave a note",
+    "intro": "Recruiters, clients, fellow developers, or just passing through: say hi. Every note gets its own stamp, and you can draw one instead of writing.",
+    "cta": "Leave a note",
+    "sampleBadge": "Sample notes (development only)",
+    "anonymous": "Anonymous",
+    "roles": {
+      "recruiter": "Recruiter",
+      "manager": "Hiring manager",
+      "client": "Client",
+      "engineer": "Developer",
+      "designer": "Designer",
+      "friend": "Friend",
+      "visitor": "Just browsing"
+    },
+    "modal": {
+      "title": "Leave a note",
+      "close": "Close",
+      "tabWrite": "Write",
+      "tabDoodle": "Draw",
+      "name": "Name",
+      "namePlaceholder": "Optional. Leave empty to stay anonymous",
+      "role": "I'm a…",
+      "message": "Message",
+      "messagePlaceholder": "Say hi, give feedback, or tell me what you're working on…",
+      "doodleHint": "Draw something. Keep it friendly.",
+      "undo": "Undo",
+      "clear": "Clear",
+      "yourStamp": "Your stamp",
+      "reviewNotice": "Notes and drawings are reviewed before they appear on the wall, usually within a day.",
+      "submit": "Send for review",
+      "successTitle": "Thank you!",
+      "successText": "Your note is in the review pile. It'll show up on the wall once I've read it.",
+      "done": "Back to the site",
+      "shuffle": "Shuffle",
+      "sending": "Sending…",
+      "errors": {
+        "invalid": "Something in the note doesn't look right. Please check it and try again.",
+        "captcha": "The spam check didn't go through. Please try again.",
+        "rate": "You've already left a few notes today. Thank you! Try again tomorrow.",
+        "unavailable": "The visitor log isn't taking notes right now. Please try again later.",
+        "server": "Something went wrong on my side. Please try again in a moment."
+      },
+      "privacy": "Your note is stored only so I can review it and show it here. Want it removed? Email contact@nikatopu.dev."
+    },
+    "empty": "No notes on the wall yet. Be the first to leave one."
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Tell me about your project",
+    "intro": "Every project is different, so I quote each one individually. Send a few lines and I'll reply within a day.",
+    "directTitle": "Or message me directly",
+    "name": "Your name",
+    "business": "Business or website",
+    "needs": "What do you need?",
+    "needsOptions": [
+      "New website",
+      "Redesign",
+      "SEO and speed",
+      "Admin panel / CMS",
+      "Something interactive",
+      "Not sure yet"
+    ],
+    "message": "A few words about it",
+    "method": "Best way to reach you",
+    "handle": "Your number, username or email",
+    "submit": "Send request",
+    "sent": "Thanks! Your request is in. I'll get back to you within a day.",
+    "whatsappPrefill": "Hi Nika, I found you through nikatopu.dev and I'd like a quote for…",
+    "needsPlaceholder": "Choose one",
+    "sending": "Sending…",
+    "errors": {
+      "invalid": "Please check the highlighted details and try again.",
+      "captcha": "The spam check didn't go through. Please try again.",
+      "rate": "You've already sent a few requests today. I'll reply to those first!",
+      "unavailable": "The form isn't working right now. Please message me directly instead.",
+      "server": "Something went wrong on my side. Please message me directly instead."
+    },
+    "privacy": "I only use these details to reply to you. Want them deleted? Just ask."
+  },
+  "case": {
+    "client": "Client",
+    "role": "Role",
+    "years": "Years",
+    "stack": "Stack",
+    "live": "Visit the live site",
+    "tldr": "In short",
+    "timeline": "Timeline",
+    "back": "All case files",
+    "next": "Next case",
+    "ctaButton": "Get a quote",
+    "hoodHint": "For developers"
+  },
+  "footer": {
+    "localTime": "Local time in Tbilisi",
+    "rights": "Built and designed by Nikoloz Topuridze."
+  }
+}

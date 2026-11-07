@@ -1,0 +1,87 @@
+{
+  "title": "Anuka Live",
+  "headline": "The one link a musician sends to labels, studios and press",
+  "summary": "An artist website for musician and sound designer Anuka Kipshidze: a portfolio to send to the industry, with an admin that keeps it current without a developer.",
+  "tabLabel": "Music · Artist portfolio",
+  "role": "Freelance developer: design implementation, build, admin, revisions",
+  "timeline": [
+    {
+      "period": "Feb – May 2025",
+      "text": "Built the website and its content admin."
+    },
+    {
+      "period": "2026",
+      "text": "Revision: admin improvements and a backend restructure to fit the hosting plan."
+    }
+  ],
+  "tldr": [
+    "Anuka Kipshidze is a musician, producer, sound designer and multi-instrumentalist from Tbilisi.",
+    "The site isn't built for search traffic. It's the link Anuka sends to labels, studios, festivals and journalists, so it has to impress in the first ten seconds and always be up to date.",
+    "I built the site and an admin where Anuka manages news, music and sound-design work, so it never goes stale between pitches."
+  ],
+  "metrics": [
+    {
+      "value": "3",
+      "label": "content areas the artist manages alone: news, music, sound design"
+    },
+    {
+      "value": "5",
+      "label": "streaming platforms linked from each release"
+    },
+    {
+      "value": "1",
+      "label": "link to send with every pitch"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "The brief",
+      "paragraphs": [
+        "Musicians who work across several things (releases, sound design for video, live work) end up sending people a messy pile of links. Anuka needed one place that presents all of it professionally and can be updated the day something new comes out.",
+        "The audience is small and specific: people in the industry who will look carefully, once. That means the work has to be easy to hear and see immediately, on any device."
+      ],
+      "bullets": []
+    },
+    {
+      "heading": "What I built",
+      "paragraphs": [],
+      "bullets": [
+        "A music section where each release links to Spotify, Apple Music, YouTube, SoundCloud and Bandcamp, with a built-in player for quick previews so nobody has to leave the page to listen.",
+        "A sound-design portfolio with the video work front and centre.",
+        "News and blog posts for releases, collaborations and appearances.",
+        "Contact and booking, kept simple.",
+        "An admin panel where Anuka edits all of the above (text, images, links, videos) without asking me."
+      ]
+    },
+    {
+      "heading": "The 2026 revision",
+      "paragraphs": [
+        "When I came back to improve the admin, the hosting plan's limit on server functions was getting in the way of adding features. Rather than push the client onto a paid plan, I restructured the backend so all the admin operations go through one shared router. That kept the project on the free tier with room to grow."
+      ],
+      "bullets": []
+    },
+    {
+      "heading": "What it means for the artist",
+      "paragraphs": [
+        "The website keeps up with the career instead of lagging behind it. A new track, video or press mention can be on the site the same day, by Anuka, which is what makes it worth sending."
+      ],
+      "bullets": []
+    }
+  ],
+  "underTheHood": {
+    "heading": "Under the hood",
+    "paragraphs": [
+      "A React single-page app with serverless API routes on Vercel, Prisma with PostgreSQL, Cloudinary for images and video, and JWT-based admin authentication with hashed passwords."
+    ],
+    "bullets": [
+      "Uploads go to Cloudinary with signed requests, so the media library can't be written to by anyone outside the admin.",
+      "One dynamic admin route plus a shared router replaced a growing set of separate functions, which kept the project under the Hobby plan's function limit.",
+      "Responsive layouts with touch-friendly scrolling for the music shelf on mobile."
+    ]
+  },
+  "cta": "Need a portfolio site you can keep up to date yourself?",
+  "seo": {
+    "title": "Anuka Live: artist website and admin for musician Anuka Kipshidze",
+    "description": "An artist portfolio for Tbilisi-based musician and sound designer Anuka Kipshidze, with a self-managed admin for music, news and sound-design work."
+  }
+}

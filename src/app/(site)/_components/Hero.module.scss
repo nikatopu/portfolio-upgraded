@@ -1,0 +1,152 @@
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) var(--gutter) 0;
+  min-height: min(calc(100svh - var(--header-h)), 940px);
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  margin-top: clamp(48px, 11vh, 120px);
+  font: 500 0.8rem/1.2 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.name {
+  margin-top: 14px;
+  font: var(--display-weight) clamp(3.4rem, 11.5vw, 10.5rem) / 0.88 var(--font-display);
+  font-stretch: var(--display-stretch);
+  text-transform: var(--title-case);
+  letter-spacing: calc(-0.03em + var(--tracking-offset));
+
+  span {
+    display: inline-block;
+    margin-right: 0.18em;
+    animation: rise 1s var(--ease) both;
+  }
+
+  span:last-child {
+    font-style: var(--title-italic);
+  }
+}
+
+// No opacity:0 and no blur on purpose: the text must count as painted for LCP from frame one,
+// and a large blur is expensive to paint on low-end phones.
+@keyframes rise {
+  from {
+    transform: translateY(0.25em);
+  }
+}
+
+.bottom {
+  margin-top: auto;
+  padding: clamp(32px, 6vh, 64px) 0 clamp(32px, 6vh, 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: end;
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.copy {
+  max-width: 40rem;
+  animation: rise 0.9s var(--ease) 0.2s both;
+}
+
+.lede {
+  font-size: clamp(1.2rem, 2.1vw, 1.55rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.cred {
+  margin-top: 14px;
+  color: var(--muted);
+  max-width: 34rem;
+}
+
+.ctas {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+}
+
+// drawn arrow: same stroke weight as Hanken Grotesk at this size, slides on hover
+.arrow {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s var(--ease);
+}
+
+.primary:hover .arrow {
+  transform: translateX(4px);
+}
+
+.primary {
+  background: var(--accent);
+  color: var(--accent-ink) !important;
+
+  &:hover {
+    background: var(--ink);
+    color: var(--paper) !important;
+  }
+}
+
+.secondary {
+  border: 1px solid var(--rule);
+
+  &:hover {
+    border-color: var(--ink);
+  }
+}
+
+.stampWrap {
+  justify-self: end;
+
+  @media (max-width: 760px) {
+    display: none;
+  }
+}
+
+.stamp {
+  display: block;
+  animation: stampIn 0.55s cubic-bezier(0.3, 1.4, 0.5, 1) 0.9s both;
+}
+
+@keyframes stampIn {
+  from {
+    opacity: 0;
+    transform: scale(1.35) rotate(-6deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name span,
+  .copy,
+  .stamp {
+    animation: none;
+  }
+}

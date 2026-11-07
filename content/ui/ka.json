@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "homeTitle": "",
+    "homeDescription": ""
+  },
+  "nav": {
+    "work": "",
+    "lab": "",
+    "notes": "",
+    "contact": "",
+    "toLight": "",
+    "toDark": "",
+    "soundOn": "",
+    "soundOff": "",
+    "otherLanguage": "",
+    "otherLanguageLabel": ""
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "",
+    "lede": "ვეხმარები ბრენდებს გადააქციონ მნახველები კლიენტებად.",
+    "credibility": "",
+    "ctaPrimary": "",
+    "ctaSecondary": "",
+    "stampText": ""
+  },
+  "work": {
+    "label": "",
+    "title": "",
+    "intro": "",
+    "open": "",
+    "caseLabel": "",
+    "client": "",
+    "product": "",
+    "files": ""
+  },
+  "campaigns": {
+    "label": "",
+    "title": "",
+    "intro": "",
+    "items": [
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "url": ""
+      }
+    ],
+    "more": "",
+    "archive": [
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      },
+      {
+        "artist": "",
+        "format": "",
+        "year": "",
+        "url": ""
+      }
+    ],
+    "allLabel": "",
+    "allNote": ""
+  },
+  "building": {
+    "label": "",
+    "title": "",
+    "text": "",
+    "link": ""
+  },
+  "lab": {
+    "label": "",
+    "title": "",
+    "intro": "",
+    "seed": "",
+    "density": "",
+    "flow": "",
+    "shape": "",
+    "shapeCircle": "",
+    "shapeSquare": "",
+    "shapeHex": "",
+    "shuffle": "",
+    "download": "",
+    "moreTitle": "",
+    "more": [
+      {
+        "title": "",
+        "text": ""
+      },
+      {
+        "title": "",
+        "text": ""
+      }
+    ]
+  },
+  "notes": {
+    "label": "",
+    "title": "",
+    "intro": "",
+    "cta": "",
+    "sampleBadge": "",
+    "anonymous": "",
+    "roles": {
+      "recruiter": "",
+      "manager": "",
+      "client": "",
+      "engineer": "",
+      "designer": "",
+      "friend": "",
+      "visitor": ""
+    },
+    "modal": {
+      "title": "",
+      "close": "",
+      "tabWrite": "",
+      "tabDoodle": "",
+      "name": "",
+      "namePlaceholder": "",
+      "role": "",
+      "message": "",
+      "messagePlaceholder": "",
+      "doodleHint": "",
+      "undo": "",
+      "clear": "",
+      "yourStamp": "",
+      "reviewNotice": "",
+      "submit": "",
+      "successTitle": "",
+      "successText": "",
+      "done": "",
+      "shuffle": "",
+      "sending": "",
+      "errors": {
+        "invalid": "",
+        "captcha": "",
+        "rate": "",
+        "unavailable": "",
+        "server": ""
+      },
+      "privacy": ""
+    },
+    "empty": ""
+  },
+  "contact": {
+    "label": "",
+    "title": "",
+    "intro": "",
+    "directTitle": "",
+    "name": "",
+    "business": "",
+    "needs": "",
+    "needsOptions": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "message": "",
+    "method": "",
+    "handle": "",
+    "submit": "",
+    "sent": "",
+    "whatsappPrefill": "",
+    "needsPlaceholder": "",
+    "sending": "",
+    "errors": {
+      "invalid": "",
+      "captcha": "",
+      "rate": "",
+      "unavailable": "",
+      "server": ""
+    },
+    "privacy": ""
+  },
+  "case": {
+    "client": "",
+    "role": "",
+    "years": "",
+    "stack": "",
+    "live": "",
+    "tldr": "",
+    "timeline": "",
+    "back": "",
+    "next": "",
+    "ctaButton": "",
+    "hoodHint": ""
+  },
+  "footer": {
+    "localTime": "",
+    "rights": ""
+  }
+}
