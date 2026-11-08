@@ -1,7 +1,7 @@
 {
   "title": "Iberieli",
-  "headline": "One winery, two websites, the same developer",
-  "summary": "A family winery's site, built by hand in 2024 and rebuilt in 2026 so the family can manage their own wine catalogue and importers abroad can find where to buy.",
+  "headline": "One winery, two websites and the same developer",
+  "summary": "A winery's website, built by hand in 2024 and rebuilt in 2026 so the business can manage their own wine catalogue and importers abroad can find where to buy.",
   "tabLabel": "Winery · B2B",
   "role": "Freelance developer: design, build, and ongoing support",
   "timeline": [
@@ -15,13 +15,13 @@
     },
     {
       "period": "2026",
-      "text": "Full rebuild on Next.js with a database and an admin panel the family uses themselves."
+      "text": "Full rebuild on Next.js with a database and an admin panel the business uses itself."
     }
   ],
   "tldr": [
-    "Iberieli is a family-owned Georgian winery making natural wine in qvevri, selling mostly to importers abroad.",
+    "Iberieli is a family-owned Georgian winery making natural wine in qvevri, selling to importers in Europe, Asia and to USA.",
     "I built their first website in 2024 and came back in 2026 to rebuild it as a server-rendered Next.js site with its own wine catalogue admin.",
-    "Today the family adds, edits and hides wines without a developer, every wine has its own searchable page, and each visitor sees distributors in their country."
+    "Today the business adds, edits and hides wines without a developer, every wine has its own searchable page and each visitor sees distributors in their country."
   ],
   "metrics": [
     {
@@ -41,15 +41,15 @@
     {
       "heading": "The client",
       "paragraphs": [
-        "Iberieli is a small family business. They grow grapes, make wine the traditional Georgian way, and sell to importers and distributors in other countries. Their website isn't a shop. It's the thing a buyer in Germany or Japan opens after a wine fair to decide whether this winery is serious.",
-        "So it has to look trustworthy, explain each wine properly (grapes, vinification, taste, food pairing), and make it obvious how to buy."
+        "Iberieli is a family business. They grow grapes, make wine the traditional Georgian way and sell to importers and distributors in other countries. Their website isn't a shop but more of a business card - viewing the website people in Germany or France know this business is serious.",
+        "So it has to look trustworthy, explain each wine properly (grapes, vinification, taste, food pairing) and make it obvious how to buy for importers."
       ],
       "bullets": []
     },
     {
       "heading": "2024: the first version",
       "paragraphs": [
-        "I started in February 2024, working directly with the head of the business. We designed in Figma, tested the layout with a few people outside the company, and I hand-coded the site in HTML, CSS and JavaScript, in English and Georgian. It went live in mid-2024 on free hosting, so there was no monthly cost to the winery.",
+        "I started in February 2024, working directly with the head of the business. We designed in Figma, tested the layout with a few people outside the company and I hand-coded the site in HTML, CSS and JavaScript, in English and Georgian. It went live in mid-2024 on free hosting, so there was no monthly cost to the winery.",
         "It did its job, but every new wine, new photo or corrected description needed me. As the range grew, that became the bottleneck."
       ],
       "bullets": []
@@ -60,11 +60,11 @@
         "When the family asked for more changes, I suggested we stop patching and rebuild properly. These are the main decisions:"
       ],
       "bullets": [
-        "A wine catalogue in a database, with a simple admin panel. The family can add a wine, upload photos, edit tasting notes, mark organic farming, and hide a wine that's sold out without deleting it.",
-        "Server-rendered pages. Every wine page arrives as complete HTML, which search engines and link previews read correctly.",
+        "A wine catalogue in a database, with a simple to use admin panel. The business can add a wine, upload photos, edit tasting notes, mark organic farming and hide a wine that's sold out.",
+        "Server-rendered pages: Every wine page arrives as complete HTML, which search engines and link previews read correctly.",
         "Each wine has its own page with its own title, description, social preview and product data. A search for one specific wine can lead straight to it.",
         "\"Where to buy\" adapts to the visitor's country. A visitor from Poland sees the Polish distributor first, without a location pop-up.",
-        "Privacy-friendly analytics. Measurement only loads after the visitor accepts cookies, so the family can see which wines get attention."
+        "Privacy-friendly analytics: Measurement only loads after the visitor accepts cookies, so the family can see which wines get attention."
       ]
     },
     {

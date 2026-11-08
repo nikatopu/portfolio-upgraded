@@ -16,7 +16,7 @@
   ],
   "tldr": [
     "Anuka Kipshidze is a musician, producer, sound designer and multi-instrumentalist from Tbilisi.",
-    "The site isn't built for search traffic. It's the link Anuka sends to labels, studios, festivals and journalists, so it has to impress in the first ten seconds and always be up to date.",
+    "The site isn't built for search traffic. Anuka sends this link to labels, studios, festivals and journalists, so it has to impress in the first ten seconds and always be up to date.",
     "I built the site and an admin where Anuka manages news, music and sound-design work, so it never goes stale between pitches."
   ],
   "metrics": [
@@ -25,8 +25,8 @@
       "label": "content areas the artist manages alone: news, music, sound design"
     },
     {
-      "value": "5",
-      "label": "streaming platforms linked from each release"
+      "value": "6",
+      "label": "different pages for different industries"
     },
     {
       "value": "1",
@@ -37,7 +37,7 @@
     {
       "heading": "The brief",
       "paragraphs": [
-        "Musicians who work across several things (releases, sound design for video, live work) end up sending people a messy pile of links. Anuka needed one place that presents all of it professionally and can be updated the day something new comes out.",
+        "Musicians and other artists who work across several things (releases, sound design for video, live work) end up sending people a messy pile of links. Anuka needed one place that presents all of it professionally and can be updated the day something new comes out.",
         "The audience is small and specific: people in the industry who will look carefully, once. That means the work has to be easy to hear and see immediately, on any device."
       ],
       "bullets": []
@@ -56,7 +56,7 @@
     {
       "heading": "The 2026 revision",
       "paragraphs": [
-        "When I came back to improve the admin, the hosting plan's limit on server functions was getting in the way of adding features. Rather than push the client onto a paid plan, I restructured the backend so all the admin operations go through one shared router. That kept the project on the free tier with room to grow."
+        "When I came back to improve the admin, the hosting plan's limit on server functions was getting in the way of adding features. Rather than push the client onto a paid plan, I restructured the backend so all the admin operations go through one shared router while keeping it secure (obviously). That kept the project on the free tier with room to grow."
       ],
       "bullets": []
     },

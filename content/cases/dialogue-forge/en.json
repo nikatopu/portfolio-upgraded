@@ -1,26 +1,26 @@
 {
   "title": "Dialogue Forge",
-  "headline": "A free dialogue editor for game developers who just want to start writing",
-  "summary": "A browser-based visual editor for branching game dialogue, built because the existing tools were paid, limited, desktop-bound, tied to one engine, or text-only.",
+  "headline": "A free dialogue editor for game developers who want to create branching dialogues simply",
+  "summary": "A browser-based visual editor for branching game dialogue, built because the existing tools were paid, limited, desktop-bound, tied to one engine or text-only.",
   "tabLabel": "Product · Game dev tool",
   "role": "Solo founder: product, design, engineering, launch",
   "timeline": [
     {
       "period": "Mar 2026",
-      "text": "Wrote branching dialogue by hand in code for a small game, and decided it should be visual."
+      "text": "Wrote branching dialogue by hand in code for a small game and decided it should be visual."
     },
     {
       "period": "May 2026",
       "text": "v1.0 launched: node editor, live preview and JSON export, all in the browser."
     },
     {
-      "period": "May – Oct 2026",
+      "period": "May 2026 – Continuous",
       "text": "13 releases: cloud saves, mobile editing, variables and conditions, validation, themes, a public roadmap."
     }
   ],
   "tldr": [
     "Branching dialogue is the backbone of story-driven games, but the tools for writing it were either paid or limited, desktop-only, tied to one engine, or text-only.",
-    "I built Dialogue Forge: open a browser tab and start drawing conversations. No install, no account, free for commercial use, and it exports one clean JSON file any engine can read.",
+    "I built Dialogue Forge: open a browser tab and start drawing conversations. No install, no account, free for commercial use and it exports one clean JSON file.",
     "With almost no marketing it has reached 50 active users in 90 days, and half of the people who created an account use it every week."
   ],
   "metrics": [
@@ -30,7 +30,7 @@
     },
     {
       "value": "50",
-      "label": "active users in the last 90 days, from 3 social posts and 1 itch.io page"
+      "label": "active users in the last 90 days, from 3 social and 1 itch.io posts"
     },
     {
       "value": "10 / 20",
@@ -41,7 +41,7 @@
     {
       "heading": "Why I built it",
       "paragraphs": [
-        "In early 2026 I was building a small dialogue-driven game and writing the conversation tree directly in TypeScript: nodes, answers and \"next\" pointers, nearly 200 lines for a short scene. Every change meant reading code to picture a graph. The obvious fix was to draw the graph instead.",
+        "In early 2026 I was building a small dialogue-driven game and writing the conversation tree directly in TypeScript: nodes, answers and \"next\" pointers, nearly 200 lines for a short scene. Every change meant reading code to picture a graph. There had to be a better solution.",
         "So I looked at what game developers actually use, and found a real but narrow gap."
       ],
       "bullets": [

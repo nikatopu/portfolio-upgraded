@@ -15,21 +15,21 @@
     }
   ],
   "tldr": [
-    "GeoWonder runs private, fully customisable tours across Georgia with local guides. There's no office, and almost every booking starts as a WhatsApp message.",
+    "GeoWonder runs private, fully customisable tours across Georgia with local guides. There's no office and every booking starts as a WhatsApp message.",
     "I built the site and an admin where the owner manages tours, articles and photos. A year later I audited it for search and fixed what was keeping it invisible.",
     "The overhaul made the hero video roughly 3× lighter, let search engines see every tour, and made every WhatsApp and phone tap measurable."
   ],
   "metrics": [
     {
-      "value": "17 → 5.3 MB",
-      "label": "hero video on desktop (poster image: 719 KB → 116 KB)"
+      "value": "50",
+      "label": "active monthly viewers from other countries"
     },
     {
-      "value": "6 → 19",
-      "label": "tours that search engines could reach from the tours page"
+      "value": "19",
+      "label": "tours that search engines can reach"
     },
     {
-      "value": "0 → 3",
+      "value": "3",
       "label": "kinds of lead tracked: WhatsApp taps, phone taps, form submissions"
     }
   ],
@@ -37,14 +37,14 @@
     {
       "heading": "The client",
       "paragraphs": [
-        "GeoWonder is a small tour operator. The guides speak Georgian, English and Russian, every trip is private and adjustable, and every price is quoted individually. That shaped everything: the site's job isn't to sell a package, it's to make a traveller trust the guides enough to send a message."
+        "GeoWonder is a small tour operator. The guides speak Georgian, English and Russian, every trip is private and adjustable, and every price is quoted individually. That shaped everything: the site's job is to make a traveller trust the guides enough to send a message."
       ],
       "bullets": []
     },
     {
       "heading": "2025: the build",
       "paragraphs": [
-        "I built the site with an admin panel so the owner can run it without me: create and reorder tours by drag and drop, write travel articles in a familiar text editor, manage the photo gallery, and update contact details. Contact is WhatsApp-first, because that's how tourists in Georgia actually reach guides."
+        "I built the site with an admin panel so the owner can run it without me: Create and reorder tours by drag and drop, write travel articles in a familiar text editor, manage the photo gallery and update contact details. Contact is WhatsApp-first, because that's how tourists in Georgia actually reach guides."
       ],
       "bullets": []
     },
@@ -55,9 +55,7 @@
       ],
       "bullets": [
         "Tour pages had only 37–62 words of unique text each. The rest was the same FAQ repeated on every tour.",
-        "The tours list only showed search engines 6 of the 19 tours. The rest loaded with JavaScript after the page arrived.",
         "The main headline started invisible and faded in, which delayed the moment Google considers the page \"loaded\".",
-        "The hero video weighed 17 MB, link previews on most pages showed the homepage's title, and the phone link was missing the country code's \"+\", so it could fail from a foreign SIM.",
         "Not a single WhatsApp or phone tap was being measured, so there was no way to tell whether anything worked.",
         "While auditing, I also found and closed a security gap in the admin's data routes."
       ]
@@ -65,7 +63,7 @@
     {
       "heading": "What I changed",
       "paragraphs": [
-        "I worked through the fixes in order of how much each one would lead to more messages, and agreed the business rules with the owner first: no prices on the site, every tour described as customisable, three guide languages everywhere."
+        "I worked through the fixes in order of how much each one would lead to more messages and agreed the business rules with the owner first: no prices on the site, every tour described as customisable, three guide languages everywhere."
       ],
       "bullets": [
         "Correct titles, descriptions, link previews and canonical addresses on every page, from one shared system so they can't drift again.",
@@ -80,7 +78,7 @@
     {
       "heading": "Results so far",
       "paragraphs": [
-        "The overhaul went live at the end of October 2026. Search rankings take weeks to months to respond, so I'm not going to claim a traffic jump yet. What changed immediately is measurable above: lighter pages, every tour visible to search engines, and lead tracking in place. I'll update this case study with Search Console and enquiry numbers in early 2027."
+        "The overhaul went live at the end of October 2026. Search rankings take weeks to months to respond, so I'm not going to claim a traffic jump yet. What changed immediately is measurable above: lighter pages, every tour visible to search engines and lead tracking in place. I'll update this case study with Search Console and enquiry numbers in early 2027."
       ],
       "bullets": []
     }
@@ -88,7 +86,7 @@
   "underTheHood": {
     "heading": "Under the hood",
     "paragraphs": [
-      "Next.js 15 App Router, Prisma with PostgreSQL, Vercel Blob for media, and TinyMCE in the admin. The SEO work is one shared metadata builder used by every route, so canonical and preview tags can't go out of sync page by page."
+      "Next.js 15 App Router, Prisma with PostgreSQL, Vercel Blob for media and TinyMCE in the admin. The SEO work is one shared metadata builder used by every route, so canonical and preview tags can't go out of sync page by page."
     ],
     "bullets": [
       "On-demand revalidation plus IndexNow pings when the owner publishes, so new tours reach search engines in minutes instead of whenever the cache expires.",
